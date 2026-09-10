@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reza Larimi</title>
+<meta name="description" content="Reza Larimi is a mechanical and mechatronics engineer and four-time startup founder in Vancouver, building AI systems, hardware products and cleantech.">
+<link rel="canonical" href="https://rezalari.github.io/">
+<meta property="og:title" content="Reza Larimi">
+<meta property="og:description" content="Engineer and founder. I build products that ship, from concept to production.">
+<meta property="og:image" content="https://rezalari.github.io/assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/reza.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Reza Larimi","jobTitle":"Research Engineering Manager","worksFor":{"@type":"Organization","name":"WearTech Labs, Simon Fraser University"},"url":"https://rezalari.github.io/","sameAs":["https://www.linkedin.com/in/larimi/","https://github.com/rezalari"],"address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"email":"mailto:reza.larimi@gmail.com"}
+</script>
+<style>
+  :root{
+    --bg:#f7f7f5; --bg-2:#efefec; --ink:#17181a; --ink-2:#4b4d52; --ink-3:#7a7d84;
+    --line:#e2e2dd; --accent:#2b4bd6; --accent-ink:#ffffff; --accent-soft:#e6eafb;
+    --radius:14px; --ease:cubic-bezier(.16,1,.3,1);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1012; --bg-2:#16171a; --ink:#f1f1ee; --ink-2:#b4b6bc; --ink-3:#7d8088;
+      --line:#26282c; --accent:#8aa0ff; --accent-ink:#0f1012; --accent-soft:#1b2140; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  @media(min-width:768px){.wrap{padding:0 40px}}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:10;height:68px;display:flex;align-items:center;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+  .brand{font-weight:600;letter-spacing:-.01em}
+  .links{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--ink-2)}
+  .links a:hover{color:var(--ink)}
+  .links .hide-sm{display:none}
+  @media(min-width:640px){.links .hide-sm{display:inline}}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 20px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap;transition:transform .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease)}
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-primary:hover{filter:brightness(1.06)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink-3)}
+  .nav .btn{height:38px;padding:0 16px;font-size:14px}
+
+  /* hero */
+  .hero{padding:56px 0 72px}
+  @media(min-width:960px){.hero{padding:72px 0 96px}}
+  .hero .grid{display:grid;gap:40px;align-items:center}
+  @media(min-width:960px){.hero .grid{grid-template-columns:7fr 5fr;gap:64px}}
+  h1{font-size:clamp(38px,5.4vw,64px);line-height:1.02;letter-spacing:-.035em;font-weight:600;margin:0 0 22px;max-width:14ch}
+  h1 em{font-style:italic;font-weight:600;color:var(--accent);padding-bottom:2px;line-height:1.1}
+  .lede{font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:46ch;margin:0 0 32px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .portrait{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--bg-2);aspect-ratio:4/5;max-width:440px;margin:0 auto}
+  @media(min-width:960px){.portrait{margin:0 0 0 auto}}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+
+  /* sections */
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  @media(min-width:960px){section{padding:104px 0}}
+  h2{font-size:clamp(28px,3.2vw,40px);line-height:1.08;letter-spacing:-.03em;font-weight:600;margin:0 0 14px}
+  .sub{color:var(--ink-2);max-width:56ch;margin:0 0 44px;font-size:18px}
+
+  /* what I work on: 2fr 1fr asymmetric */
+  .areas{display:grid;gap:18px}
+  @media(min-width:900px){.areas{grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto}
+    .areas .a1{grid-row:1/3}}
+  .area{border-radius:var(--radius);padding:28px;background:var(--bg-2)}
+  .area.a1{background:var(--accent);color:var(--accent-ink);padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px}
+  .area h3{font-size:22px;letter-spacing:-.02em;margin:0 0 10px;font-weight:600}
+  .area p{margin:0;color:var(--ink-2);font-size:16px}
+  .area.a1 p{color:color-mix(in srgb,var(--accent-ink) 82%,transparent)}
+  .area.a1 .tag{font-family:"Geist Mono",ui-monospace,monospace;font-size:13px;opacity:.85}
+
+  /* track record */
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 20px;margin:0 0 56px}
+  @media(min-width:768px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat b{display:block;font-size:40px;letter-spacing:-.03em;line-height:1;font-weight:600;margin-bottom:8px}
+  .stat span{color:var(--ink-2);font-size:15px}
+  .cols{display:grid;gap:40px}
+  @media(min-width:900px){.cols{grid-template-columns:1fr 1fr;gap:64px}}
+  .cols h3{font-size:15px;color:var(--ink-3);font-weight:500;margin:0 0 18px;letter-spacing:.01em}
+  .role{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+  .role:last-child{border-bottom:1px solid var(--line)}
+  .role time{font-family:"Geist Mono",ui-monospace,monospace;font-size:13px;color:var(--ink-3);padding-top:4px}
+  .role b{display:block;font-weight:600}
+  .role span{color:var(--ink-2);font-size:15px}
+
+  /* now */
+  .now{display:grid;gap:32px}
+  @media(min-width:900px){.now{grid-template-columns:5fr 7fr;gap:64px;align-items:start}}
+  .now p{margin:0 0 16px;color:var(--ink-2);font-size:18px}
+  .now p:last-child{margin:0}
+
+  /* book */
+  .book{background:var(--bg-2)}
+  .book .grid{display:grid;gap:36px}
+  @media(min-width:960px){.book .grid{grid-template-columns:4fr 8fr;gap:56px;align-items:start}}
+  .book ul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:16px}
+  .book li a{color:var(--ink);border-bottom:1px solid var(--line)}
+  .book li a:hover{border-color:var(--ink)}
+  .book li small{display:block;color:var(--ink-3);font-size:13px}
+  .cal{min-height:640px;border-radius:var(--radius);overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+  .cal-fallback{padding:40px;text-align:center;color:var(--ink-2)}
+
+  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--ink-3);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+  footer a:hover{color:var(--ink)}
+
+  /* reveal */
+  .r{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .r.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Reza Larimi</a>
+    <div class="links">
+      <a class="hide-sm" href="#work">Work</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a class="btn btn-primary" href="#book">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <h1>I build products that <em>ship</em>, from concept to production.</h1>
+      <p class="lede">Mechanical and mechatronics engineer, four-time startup founder, now building AI systems and cleantech in Vancouver.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#book">Book a call</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/reza.jpg" srcset="assets/reza-600.jpg 600w, assets/reza.jpg 1200w" sizes="(min-width:960px) 440px, 90vw" width="1200" height="1500" alt="Reza Larimi" fetchpriority="high">
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <h2 class="r">What I work on</h2>
+    <p class="sub r">Three kinds of problems. Each one ends with something real in someone's hands.</p>
+    <div class="areas">
+      <div class="area a1 r">
+        <span class="tag">AI systems</span>
+        <div>
+          <h3>Agentic systems that do real work</h3>
+          <p>Multi-agent pipelines, automation and digital twins wired into the tools a business already runs. Built to run every day, not to demo once.</p>
+        </div>
+      </div>
+      <div class="area r">
+        <h3>Hardware and product engineering</h3>
+        <p>Design for manufacturing, robotics, sensors and automation. Concept, prototype, certification, volume production.</p>
+      </div>
+      <div class="area r">
+        <h3>Cleantech and waste-to-value</h3>
+        <p>Engineering and business models that turn waste streams into products, with grants, pilots and partners lined up behind them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="r">Track record</h2>
+    <p class="sub r">Ten years of founding, building and shipping across Canada.</p>
+    <div class="stats r">
+      <div class="stat"><b>4</b><span>ventures co-founded</span></div>
+      <div class="stat"><b>5</b><span>patents</span></div>
+      <div class="stat"><b>5</b><span>publications</span></div>
+      <div class="stat"><b>10+</b><span>products to production</span></div>
+    </div>
+    <div class="cols">
+      <div class="r">
+        <h3>Ventures</h3>
+        <div class="role"><time>2023 to 2025</time><div><b>GutPlans</b><span>CEO and co-founder. Personalized meal planning and grocery platform.</span></div></div>
+        <div class="role"><time>2022</time><div><b>ForthGrid</b><span>CTO and co-founder. Autonomous precision machining for frontier industries.</span></div></div>
+        <div class="role"><time>2021 to 2022</time><div><b>Entrepreneur First</b><span>Founder in residence, Toronto.</span></div></div>
+        <div class="role"><time>2016 to 2020</time><div><b>Orchard Technologies</b><span>CTO and co-founder. Metal additive manufacturing, venture backed.</span></div></div>
+      </div>
+      <div class="r">
+        <h3>Engineering</h3>
+        <div class="role"><time>2025 to now</time><div><b>WearTech Labs, SFU</b><span>Research Engineering Manager, wearable technology core facility.</span></div></div>
+        <div class="role"><time>2019 to now</time><div><b>Independent consulting</b><span>Principal mechanical and mechatronics engineer for agri-tech, food tech, consumer electronics and construction clients.</span></div></div>
+        <div class="role"><time>2017 to 2019</time><div><b>Global Heat Transfer</b><span>R&amp;D product lead. IoT monitoring for industrial heat exchangers, patented.</span></div></div>
+        <div class="role"><time>2015 to 2017</time><div><b>University of British Columbia</b><span>Research assistant. Stretchable sensors, adaptive control, robotic hands.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap now">
+    <h2 class="r">Now</h2>
+    <div class="r">
+      <p>I run engineering at WearTech Labs, Simon Fraser University's wearable technology facility, and I am completing an MBA at SFU.</p>
+      <p>Outside of that I build AI agent systems that run businesses on autopilot, and I work with cleantech partners on turning waste into products. Early mornings are for training. The rest is for building.</p>
+      <p>If you have a hard problem and want it to become a product, that is the conversation I like most.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap grid">
+    <div class="r">
+      <h2>Book a call</h2>
+      <p class="sub" style="margin-bottom:0">Thirty minutes, online. Bring a problem, a project or an idea.</p>
+      <ul>
+        <li><a href="mailto:reza.larimi@gmail.com">reza.larimi@gmail.com</a><small>Email</small></li>
+        <li><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">linkedin.com/in/larimi</a><small>LinkedIn</small></li>
+        <li><a href="https://github.com/rezalari" target="_blank" rel="noopener">github.com/rezalari</a><small>GitHub</small></li>
+      </ul>
+    </div>
+    <div class="cal r" id="cal-inline">
+      <div class="cal-fallback">
+        <p>Pick a time at <a href="https://cal.com/rezalarimi/intro" style="border-bottom:1px solid currentColor">cal.com/rezalarimi/intro</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Reza Larimi, Vancouver, Canada</span>
+    <span><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&nbsp; <a href="mailto:reza.larimi@gmail.com">Email</a></span>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll (IntersectionObserver, no scroll listeners)
+  (function(){
+    var els=document.querySelectorAll('.r');
+    if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.15});
+    els.forEach(function(e){io.observe(e)});
+  })();
+  // Cal.com inline embed
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  var CAL_READY = false; // flip to true once cal.com/rezalarimi/intro exists
+  if (CAL_READY) {
+  Cal("init", "intro", {origin:"https://app.cal.com"});
+  var dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  Cal.ns.intro("inline", { elementOrSelector:"#cal-inline", calLink: "rezalarimi/intro", layout: "month_view", config: {theme: dark ? "dark" : "light"} });
+  Cal.ns.intro("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#2b4bd6"},"dark":{"cal-brand":"#8aa0ff"}}});
+  }
+</script>
+</body>
+</html>
