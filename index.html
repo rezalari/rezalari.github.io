@@ -4,218 +4,363 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reza Larimi</title>
-<meta name="description" content="Reza Larimi is a mechanical and mechatronics engineer and four-time startup founder in Vancouver, building AI systems, hardware products and cleantech.">
+<meta name="description" content="Reza Larimi is a fractional CTO and founder coach for deep tech hardware in Vancouver. 19 years, seven ventures, three times CTO. Creator of Exit Without Execution and The 99% Club.">
 <link rel="canonical" href="https://rezalari.github.io/">
 <meta property="og:title" content="Reza Larimi">
-<meta property="og:description" content="Engineer and founder. I build products that ship, from concept to production.">
+<meta property="og:description" content="Fractional CTO and founder coach for deep tech hardware. I help founders avoid the 99% Club.">
 <meta property="og:image" content="https://rezalari.github.io/assets/og.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0a0f">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/reza.jpg">
+<link rel="preload" as="image" href="assets/hero.jpg" media="(min-width:700px)">
+<link rel="preload" as="image" href="assets/hero-mobile.jpg" media="(max-width:699px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Reza Larimi","jobTitle":"Research Engineering Manager","worksFor":{"@type":"Organization","name":"WearTech Labs, Simon Fraser University"},"url":"https://rezalari.github.io/","sameAs":["https://www.linkedin.com/in/larimi/","https://github.com/rezalari"],"address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"email":"mailto:reza.larimi@gmail.com"}
+{"@context":"https://schema.org","@type":"Person","name":"Reza Larimi","jobTitle":"Fractional CTO and Founder Coach","worksFor":{"@type":"Organization","name":"WearTech Labs, Simon Fraser University"},"url":"https://rezalari.github.io/","sameAs":["https://www.linkedin.com/in/larimi/","https://github.com/rezalari","https://www.youtube.com/@reza-larimi"],"address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"email":"mailto:reza.larimi@gmail.com"}
 </script>
 <style>
   :root{
-    --bg:#f7f7f5; --bg-2:#efefec; --ink:#17181a; --ink-2:#4b4d52; --ink-3:#7a7d84;
-    --line:#e2e2dd; --accent:#2b4bd6; --accent-ink:#ffffff; --accent-soft:#e6eafb;
-    --radius:14px; --ease:cubic-bezier(.16,1,.3,1);
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#0f1012; --bg-2:#16171a; --ink:#f1f1ee; --ink-2:#b4b6bc; --ink-3:#7d8088;
-      --line:#26282c; --accent:#8aa0ff; --accent-ink:#0f1012; --accent-soft:#1b2140; }
+    --ink:#0b0a0f; --ink-2:#4a4856; --ink-3:#7d7a8a;
+    --paper:#f7f6fb; --paper-2:#eeecf7; --line:#e1dfea;
+    --violet:#6565fd; --violet-2:#4f4fe0; --violet-soft:#e6e6ff; --lav:#ccc8d3;
+    --on-dark:#f5f4fa; --on-dark-2:rgba(245,244,250,.72);
+    --radius:18px; --radius-sm:12px; --ease:cubic-bezier(.16,1,.3,1);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
   @media(min-width:768px){.wrap{padding:0 40px}}
 
-  /* nav */
-  .nav{position:sticky;top:0;z-index:10;height:68px;display:flex;align-items:center;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
-  .brand{font-weight:600;letter-spacing:-.01em}
-  .links{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--ink-2)}
-  .links a:hover{color:var(--ink)}
-  .links .hide-sm{display:none}
-  @media(min-width:640px){.links .hide-sm{display:inline}}
-
-  .btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 20px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap;transition:transform .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease)}
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 8px 0 22px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap;transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}
   .btn:active{transform:scale(.98)}
-  .btn-primary{background:var(--accent);color:var(--accent-ink)}
-  .btn-primary:hover{filter:brightness(1.06)}
-  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--ink-3)}
-  .nav .btn{height:38px;padding:0 16px;font-size:14px}
+  .btn .arrow{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:999px;transition:transform .3s var(--ease)}
+  .btn:hover .arrow{transform:translateX(3px)}
+  .btn-violet{background:var(--violet);color:#fff}
+  .btn-violet .arrow{background:#fff;color:var(--violet)}
+  .btn-violet:hover{background:var(--violet-2)}
+  .btn-glass{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .btn-glass .arrow{background:#fff;color:var(--ink)}
+  .btn-glass:hover{background:rgba(255,255,255,.2)}
+  .btn-plain{padding:0 22px;border:1px solid var(--line);color:var(--ink)}
+  .btn-plain:hover{border-color:var(--ink-3)}
+
+  /* nav (floating pill over hero) */
+  .nav{position:absolute;top:18px;left:0;right:0;z-index:10}
+  .nav .bar{max-width:1200px;margin:0 auto;padding:0 16px}
+  .nav .pill{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 10px 0 22px;border-radius:999px;background:rgba(12,11,18,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff}
+  .brand{font-weight:600;letter-spacing:-.01em}
+  .links{display:none;gap:30px;font-size:15px;color:rgba(255,255,255,.78)}
+  .links a:hover{color:#fff}
+  @media(min-width:860px){.links{display:flex}}
+  .nav .btn{height:44px;padding:0 6px 0 18px;font-size:14px}
+  .nav .btn .arrow{width:30px;height:30px}
 
   /* hero */
-  .hero{padding:56px 0 72px}
-  @media(min-width:960px){.hero{padding:72px 0 96px}}
-  .hero .grid{display:grid;gap:40px;align-items:center}
-  @media(min-width:960px){.hero .grid{grid-template-columns:7fr 5fr;gap:64px}}
-  h1{font-size:clamp(38px,5.4vw,64px);line-height:1.02;letter-spacing:-.035em;font-weight:600;margin:0 0 22px;max-width:14ch}
-  h1 em{font-style:italic;font-weight:600;color:var(--accent);padding-bottom:2px;line-height:1.1}
-  .lede{font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:46ch;margin:0 0 32px}
-  .cta{display:flex;gap:12px;flex-wrap:wrap}
-  .portrait{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--bg-2);aspect-ratio:4/5;max-width:440px;margin:0 auto}
-  @media(min-width:960px){.portrait{margin:0 0 0 auto}}
-  .portrait img{width:100%;height:100%;object-fit:cover}
+  .hero{position:relative;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-dark);background:var(--ink);overflow:hidden}
+  .hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+  .hero .shade{position:absolute;inset:0;background:
+    linear-gradient(90deg,rgba(11,10,15,.86) 0%,rgba(11,10,15,.62) 38%,rgba(11,10,15,.12) 72%,rgba(11,10,15,.35) 100%),
+    linear-gradient(180deg,rgba(11,10,15,.35) 0%,rgba(11,10,15,0) 35%,rgba(11,10,15,.55) 78%,rgba(11,10,15,.92) 100%)}
+  .hero .content{position:relative;padding:150px 0 40px}
+  @media(min-width:960px){.hero .content{padding:170px 0 56px}}
+  h1{font-size:clamp(40px,6vw,74px);line-height:1;letter-spacing:-.035em;font-weight:600;margin:0 0 26px;max-width:12ch}
+  .hero-row{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center;margin-bottom:64px}
+  .lede{margin:0;max-width:34ch;color:var(--on-dark-2);font-size:16px;line-height:1.5}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 16px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+  @media(min-width:860px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{display:flex;gap:14px;align-items:flex-start}
+  .stat i{flex:none;width:40px;height:40px;border-radius:999px;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:12px;color:rgba(255,255,255,.8)}
+  .stat b{display:block;font-size:22px;letter-spacing:-.02em;line-height:1.1;font-weight:600}
+  .stat span{font-size:13px;color:var(--on-dark-2)}
 
-  /* sections */
-  section{padding:72px 0;border-top:1px solid var(--line)}
-  @media(min-width:960px){section{padding:104px 0}}
-  h2{font-size:clamp(28px,3.2vw,40px);line-height:1.08;letter-spacing:-.03em;font-weight:600;margin:0 0 14px}
-  .sub{color:var(--ink-2);max-width:56ch;margin:0 0 44px;font-size:18px}
+  /* light sections */
+  section{padding:80px 0}
+  @media(min-width:960px){section{padding:112px 0}}
+  h2{font-size:clamp(30px,3.6vw,46px);line-height:1.06;letter-spacing:-.03em;font-weight:500;margin:0 0 16px}
+  h2 .v{color:var(--violet)}
+  .sub{color:var(--ink-2);max-width:56ch;margin:0;font-size:17px}
+  .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px;margin-bottom:44px}
 
-  /* what I work on: 2fr 1fr asymmetric */
-  .areas{display:grid;gap:18px}
-  @media(min-width:900px){.areas{grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto}
-    .areas .a1{grid-row:1/3}}
-  .area{border-radius:var(--radius);padding:28px;background:var(--bg-2)}
-  .area.a1{background:var(--accent);color:var(--accent-ink);padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px}
-  .area h3{font-size:22px;letter-spacing:-.02em;margin:0 0 10px;font-weight:600}
-  .area p{margin:0;color:var(--ink-2);font-size:16px}
-  .area.a1 p{color:color-mix(in srgb,var(--accent-ink) 82%,transparent)}
-  .area.a1 .tag{font-family:"Geist Mono",ui-monospace,monospace;font-size:13px;opacity:.85}
+  .names{background:linear-gradient(180deg,#fff 0%,var(--paper) 100%);border-bottom:1px solid var(--line);padding:44px 0}
+  .names p{margin:0 0 22px;text-align:center;color:var(--ink-3);font-size:14px}
+  .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .track{display:flex;gap:14px;width:max-content;animation:slide 38s linear infinite}
+  .track span{white-space:nowrap;padding:12px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-2);font-size:15px;font-weight:500}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.marquee{mask-image:none;-webkit-mask-image:none}}
 
-  /* track record */
-  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 20px;margin:0 0 56px}
-  @media(min-width:768px){.stats{grid-template-columns:repeat(4,1fr)}}
-  .stat b{display:block;font-size:40px;letter-spacing:-.03em;line-height:1;font-weight:600;margin-bottom:8px}
-  .stat span{color:var(--ink-2);font-size:15px}
-  .cols{display:grid;gap:40px}
-  @media(min-width:900px){.cols{grid-template-columns:1fr 1fr;gap:64px}}
-  .cols h3{font-size:15px;color:var(--ink-3);font-weight:500;margin:0 0 18px;letter-spacing:.01em}
-  .role{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
-  .role:last-child{border-bottom:1px solid var(--line)}
-  .role time{font-family:"Geist Mono",ui-monospace,monospace;font-size:13px;color:var(--ink-3);padding-top:4px}
+  /* about split */
+  .about{background:radial-gradient(1200px 500px at 20% 0%,var(--violet-soft) 0%,transparent 60%),var(--paper)}
+  .about .grid{display:grid;gap:44px;align-items:center}
+  @media(min-width:960px){.about .grid{grid-template-columns:6fr 6fr;gap:72px}}
+  .about p{color:var(--ink-2);margin:0 0 18px;max-width:52ch}
+  .about .facts{display:grid;gap:10px;margin:28px 0 34px;padding:0;list-style:none}
+  .about .facts li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+  .about .facts li::before{content:"";flex:none;width:8px;height:8px;border-radius:999px;background:var(--violet);margin-top:9px}
+  .figure{position:relative}
+  .figure .main{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;max-width:460px;margin:0 auto;background:var(--paper-2)}
+  .figure .main img{width:100%;height:100%;object-fit:cover}
+  .figure .card{position:absolute;right:0;bottom:-18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:0 20px 50px rgba(60,50,120,.12);max-width:250px}
+  @media(min-width:960px){.figure .card{right:-24px;bottom:28px}}
+  .figure .card b{display:block;font-size:15px;margin-bottom:4px}
+  .figure .card span{font-size:14px;color:var(--ink-2)}
+
+  /* services */
+  .cards{display:grid;gap:16px}
+  @media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+  .card{border-radius:var(--radius);padding:26px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:16px;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(60,50,120,.12)}
+  .card.feature{background:var(--violet);color:#fff;border-color:var(--violet)}
+  .card .img{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:16/10;background:var(--paper-2)}
+  .card .img img{width:100%;height:100%;object-fit:cover}
+  .card h3{margin:0;font-size:21px;letter-spacing:-.02em;font-weight:600}
+  .card p{margin:0;color:var(--ink-2);font-size:15px}
+  .card.feature p{color:rgba(255,255,255,.8)}
+  .card .n{font-family:"Geist Mono",monospace;font-size:12px;color:var(--ink-3)}
+  .card.feature .n{color:rgba(255,255,255,.7)}
+
+  /* help: 2x2 with one feature */
+  .help{display:grid;gap:16px}
+  @media(min-width:760px){.help{grid-template-columns:repeat(2,1fr)}}
+  .help .card.wide{grid-column:1/-1;display:grid;gap:22px;align-items:center}
+  @media(min-width:760px){.help .card.wide{grid-template-columns:1.1fr 1fr}}
+  .help .card.wide .img{aspect-ratio:16/9}
+  .help .card .k{font-family:"Geist Mono",monospace;font-size:12px;color:var(--violet)}
+  .help .card.feature .k{color:rgba(255,255,255,.8)}
+
+  /* frameworks manifesto */
+  .frames{background:var(--paper-2)}
+  .frames .grid{display:grid;gap:36px}
+  @media(min-width:960px){.frames .grid{grid-template-columns:5fr 7fr;gap:72px;align-items:start}}
+  .frame{padding:26px 0;border-top:1px solid var(--line)}
+  .frame:last-child{border-bottom:1px solid var(--line)}
+  .frame b{display:block;font-size:24px;letter-spacing:-.02em;font-weight:600;margin-bottom:8px}
+  .frame b .v{color:var(--violet)}
+  .frame p{margin:0;color:var(--ink-2)}
+  .frame small{display:block;margin-top:10px;font-family:"Geist Mono",monospace;font-size:12px;color:var(--ink-3)}
+  .quote{font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.02em;font-weight:500;margin:22px 0 0;max-width:22ch}
+
+  /* band */
+  .band{padding:0 0 80px}
+  @media(min-width:960px){.band{padding:0 0 112px}}
+  .band .box{border-radius:calc(var(--radius) + 6px);background:linear-gradient(135deg,#1a1730 0%,#2a2666 55%,var(--violet) 130%);color:#fff;padding:40px 28px;display:grid;gap:26px;align-items:center;overflow:hidden;position:relative}
+  @media(min-width:900px){.band .box{grid-template-columns:7fr 5fr;padding:56px 60px}}
+  .band h2{color:#fff;margin-bottom:12px}
+  .band p{color:rgba(255,255,255,.78);margin:0;max-width:52ch}
+  .band .cta{justify-self:start}
+  @media(min-width:900px){.band .cta{justify-self:end}}
+  .band .btn-white{background:#fff;color:var(--ink)}
+  .band .btn-white .arrow{background:var(--violet);color:#fff}
+
+  /* record */
+  .record{background:var(--paper)}
+  .roles{display:grid;gap:14px}
+  @media(min-width:760px){.roles{grid-template-columns:repeat(2,1fr)}}
+  .role{display:grid;grid-template-columns:96px 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px}
+  .role time{font-family:"Geist Mono",monospace;font-size:13px;color:var(--ink-3);padding-top:3px}
   .role b{display:block;font-weight:600}
   .role span{color:var(--ink-2);font-size:15px}
 
-  /* now */
-  .now{display:grid;gap:32px}
-  @media(min-width:900px){.now{grid-template-columns:5fr 7fr;gap:64px;align-items:start}}
-  .now p{margin:0 0 16px;color:var(--ink-2);font-size:18px}
-  .now p:last-child{margin:0}
+  /* process */
+  .steps{display:grid;gap:0;border-top:1px solid var(--line)}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  @media(min-width:860px){.step{grid-template-columns:56px 260px 1fr;gap:32px}}
+  .step i{font-style:normal;font-family:"Geist Mono",monospace;font-size:13px;color:var(--violet)}
+  .step b{font-size:19px;letter-spacing:-.01em;font-weight:600}
+  .step p{margin:0;color:var(--ink-2);grid-column:2/-1}
+  @media(min-width:860px){.step p{grid-column:auto}}
 
-  /* book */
-  .book{background:var(--bg-2)}
+  /* book (dark bookend) */
+  .book{background:var(--ink);color:var(--on-dark);background-image:radial-gradient(900px 400px at 80% 0%,rgba(101,101,253,.35),transparent 60%)}
   .book .grid{display:grid;gap:36px}
-  @media(min-width:960px){.book .grid{grid-template-columns:4fr 8fr;gap:56px;align-items:start}}
-  .book ul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:16px}
-  .book li a{color:var(--ink);border-bottom:1px solid var(--line)}
-  .book li a:hover{border-color:var(--ink)}
-  .book li small{display:block;color:var(--ink-3);font-size:13px}
-  .cal{min-height:640px;border-radius:var(--radius);overflow:hidden;background:var(--bg);border:1px solid var(--line)}
-  .cal-fallback{padding:40px;text-align:center;color:var(--ink-2)}
+  @media(min-width:960px){.book .grid{grid-template-columns:5fr 7fr;gap:64px;align-items:start}}
+  .book h2{color:#fff}
+  .book .sub{color:var(--on-dark-2)}
+  .book ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+  .book li a{border-bottom:1px solid rgba(255,255,255,.25)}
+  .book li a:hover{border-color:#fff}
+  .book li small{display:block;color:var(--on-dark-2);font-size:13px;margin-top:2px}
+  .cal{min-height:560px;border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12)}
+  .cal-fallback{padding:44px;text-align:center;color:var(--on-dark-2)}
+  .cal-fallback a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
 
-  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--ink-3);font-size:14px}
+  footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:26px 0;border-top:1px solid rgba(255,255,255,.1)}
   footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
-  footer a:hover{color:var(--ink)}
+  footer a:hover{color:#fff}
 
   /* reveal */
-  .r{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .r{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
   .r.in{opacity:1;transform:none}
+  .hero .r{transition-delay:.15s}
   @media (prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap">
-    <a class="brand" href="#top">Reza Larimi</a>
-    <div class="links">
-      <a class="hide-sm" href="#work">Work</a>
-      <a class="hide-sm" href="#about">About</a>
-      <a class="btn btn-primary" href="#book">Book a call</a>
-    </div>
-  </div>
-</nav>
-
 <header class="hero" id="top">
-  <div class="wrap grid">
-    <div>
-      <h1>I build products that <em>ship</em>, from concept to production.</h1>
-      <p class="lede">Mechanical and mechatronics engineer, four-time startup founder, now building AI systems and cleantech in Vancouver.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#book">Book a call</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn</a>
+  <picture>
+    <source media="(max-width:699px)" srcset="assets/hero-mobile.jpg">
+    <source media="(max-width:1100px)" srcset="assets/hero-960.jpg">
+    <img src="assets/hero.jpg" width="1600" height="900" alt="Reza Larimi at his studio desk" fetchpriority="high">
+  </picture>
+  <div class="shade"></div>
+  <nav class="nav">
+    <div class="bar">
+      <div class="pill">
+        <a class="brand" href="#top">Reza Larimi</a>
+        <div class="links"><a href="#about">About</a><a href="#help">How I help</a><a href="#thinking">Thinking</a><a href="#record">Track record</a></div>
+        <a class="btn btn-glass" href="#book">Book a call <span class="arrow">&rarr;</span></a>
       </div>
     </div>
-    <div class="portrait">
-      <img src="assets/reza.jpg" srcset="assets/reza-600.jpg 600w, assets/reza.jpg 1200w" sizes="(min-width:960px) 440px, 90vw" width="1200" height="1500" alt="Reza Larimi" fetchpriority="high">
+  </nav>
+  <div class="wrap content">
+    <h1 class="r in">I help founders avoid the 99% Club.</h1>
+    <div class="hero-row r in">
+      <a class="btn btn-violet" href="#book">Book a call <span class="arrow">&rarr;</span></a>
+      <p class="lede">Fractional CTO and founder coach for deep tech hardware. I tell founders what they do not want to hear, early enough to act on it.</p>
+    </div>
+    <div class="stats r in">
+      <div class="stat"><i>19</i><div><b>19+ years</b><span>hardware and mechatronics</span></div></div>
+      <div class="stat"><i>07</i><div><b>7 ventures</b><span>three times CTO</span></div></div>
+      <div class="stat"><i>05</i><div><b>5 patents</b><span>sensors, test beds, methods</span></div></div>
+      <div class="stat"><i>EF</i><div><b>EF alum</b><span>Entrepreneur First, Toronto</span></div></div>
     </div>
   </div>
 </header>
 
-<section id="work">
+<div class="names">
   <div class="wrap">
-    <h2 class="r">What I work on</h2>
-    <p class="sub r">Three kinds of problems. Each one ends with something real in someone's hands.</p>
-    <div class="areas">
-      <div class="area a1 r">
-        <span class="tag">AI systems</span>
-        <div>
-          <h3>Agentic systems that do real work</h3>
-          <p>Multi-agent pipelines, automation and digital twins wired into the tools a business already runs. Built to run every day, not to demo once.</p>
-        </div>
-      </div>
-      <div class="area r">
-        <h3>Hardware and product engineering</h3>
-        <p>Design for manufacturing, robotics, sensors and automation. Concept, prototype, certification, volume production.</p>
-      </div>
-      <div class="area r">
-        <h3>Cleantech and waste-to-value</h3>
-        <p>Engineering and business models that turn waste streams into products, with grants, pilots and partners lined up behind them.</p>
-      </div>
-    </div>
+    <p>Companies and institutions I have built with</p>
+    <div class="marquee"><div class="track">
+      <span>WearTech Labs, SFU</span><span>University of British Columbia</span><span>Entrepreneur First</span><span>Orchard Technologies</span><span>ForthGrid</span><span>GutPlans</span><span>Global Heat Transfer</span><span>Vivid Machines</span><span>EOI Technologies</span><span>Pleasant Solutions</span><span>Greenbuilt Group</span>
+      <span>WearTech Labs, SFU</span><span>University of British Columbia</span><span>Entrepreneur First</span><span>Orchard Technologies</span><span>ForthGrid</span><span>GutPlans</span><span>Global Heat Transfer</span><span>Vivid Machines</span><span>EOI Technologies</span><span>Pleasant Solutions</span><span>Greenbuilt Group</span>
+    </div></div>
   </div>
-</section>
+</div>
 
-<section id="about">
-  <div class="wrap">
-    <h2 class="r">Track record</h2>
-    <p class="sub r">Ten years of founding, building and shipping across Canada.</p>
-    <div class="stats r">
-      <div class="stat"><b>4</b><span>ventures co-founded</span></div>
-      <div class="stat"><b>5</b><span>patents</span></div>
-      <div class="stat"><b>5</b><span>publications</span></div>
-      <div class="stat"><b>10+</b><span>products to production</span></div>
+<section id="about" class="about">
+  <div class="wrap grid">
+    <div class="figure r">
+      <div class="main"><img src="assets/reza.jpg" srcset="assets/reza-600.jpg 600w, assets/reza.jpg 1200w" sizes="(min-width:960px) 460px, 90vw" width="1200" height="1500" alt="Reza Larimi" loading="lazy"></div>
+      <div class="card"><b>Fractional CTO and founder coach</b><span>Deep tech hardware, Vancouver</span></div>
     </div>
-    <div class="cols">
-      <div class="r">
-        <h3>Ventures</h3>
-        <div class="role"><time>2023 to 2025</time><div><b>GutPlans</b><span>CEO and co-founder. Personalized meal planning and grocery platform.</span></div></div>
-        <div class="role"><time>2022</time><div><b>ForthGrid</b><span>CTO and co-founder. Autonomous precision machining for frontier industries.</span></div></div>
-        <div class="role"><time>2021 to 2022</time><div><b>Entrepreneur First</b><span>Founder in residence, Toronto.</span></div></div>
-        <div class="role"><time>2016 to 2020</time><div><b>Orchard Technologies</b><span>CTO and co-founder. Metal additive manufacturing, venture backed.</span></div></div>
-      </div>
-      <div class="r">
-        <h3>Engineering</h3>
-        <div class="role"><time>2025 to now</time><div><b>WearTech Labs, SFU</b><span>Research Engineering Manager, wearable technology core facility.</span></div></div>
-        <div class="role"><time>2019 to now</time><div><b>Independent consulting</b><span>Principal mechanical and mechatronics engineer for agri-tech, food tech, consumer electronics and construction clients.</span></div></div>
-        <div class="role"><time>2017 to 2019</time><div><b>Global Heat Transfer</b><span>R&amp;D product lead. IoT monitoring for industrial heat exchangers, patented.</span></div></div>
-        <div class="role"><time>2015 to 2017</time><div><b>University of British Columbia</b><span>Research assistant. Stretchable sensors, adaptive control, robotic hands.</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap now">
-    <h2 class="r">Now</h2>
     <div class="r">
-      <p>I run engineering at WearTech Labs, Simon Fraser University's wearable technology facility, and I am completing an MBA at SFU.</p>
-      <p>Outside of that I build AI agent systems that run businesses on autopilot, and I work with cleantech partners on turning waste into products. Early mornings are for training. The rest is for building.</p>
-      <p>If you have a hard problem and want it to become a product, that is the conversation I like most.</p>
+      <h2>Meet Reza, the operator who finds out <span class="v">before you build</span></h2>
+      <p>Over 19 years and seven ventures I learned that the biggest risk in a startup is not whether the technology works. It is whether anyone was ever going to pay for it. Most founders find out the hard way, after years and millions. I help them find out faster.</p>
+      <p>I work in four modes:</p>
+      <ul class="facts">
+        <li>Research Engineering Manager at WearTech Labs, Simon Fraser University's wearable technology facility</li>
+        <li>Fractional CTO and hardware advisor through my practice, New Element Research and Development</li>
+        <li>MBA candidate in Innovation and Value Creation at SFU</li>
+        <li>Builder of AI agent systems that turn a question into a shipped, working thing the same day</li>
+      </ul>
+      <a class="btn btn-violet" href="#book">Book a call <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="help">
+  <div class="wrap">
+    <div class="head r">
+      <h2>How I <span class="v">help</span></h2>
+      <p class="sub">Five ways to work with me. All of them start with the same question: will anyone pay for this?</p>
+    </div>
+    <div class="help">
+      <div class="card wide feature r">
+        <div>
+          <span class="k">Venture Validation Sprint</span>
+          <h3 style="margin-top:10px">Exit Without Execution, applied</h3>
+          <p style="margin-top:10px">Thirty to forty-five days to prove or kill a venture thesis on paper: customer, funnel, pricing, revenue model and IP position, before you commit years and capital to building it.</p>
+        </div>
+        <div class="img"><img src="assets/hero-960.jpg" alt="" loading="lazy"></div>
+      </div>
+      <div class="card r">
+        <span class="k">Fractional CTO</span>
+        <h3>Hardware from prototype to manufacturable product</h3>
+        <p>The hardest phase of deep tech. Design for manufacturing, new product introduction, compliance, supply chain and the team to run it after me.</p>
+      </div>
+      <div class="card r">
+        <span class="k">Technical Due Diligence</span>
+        <h3>For investors and boards</h3>
+        <p>An operator's read on a hardware company: what is real, what is a demo, what it will cost to reach volume, and which risks the deck leaves out.</p>
+      </div>
+      <div class="card r">
+        <span class="k">Founder Coaching</span>
+        <h3>The conversation nobody else will have with you</h3>
+        <p>For founders who want a challenger, not a cheerleader. Positioning, validation, priorities and the patterns that put startups in the 99% Club.</p>
+      </div>
+      <div class="card r">
+        <span class="k">AI Systems</span>
+        <h3>Agents and automation that run every day</h3>
+        <p>Multi-agent pipelines, digital twins and automations wired into the tools a business already uses. Built to run in production, not to demo once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="thinking" class="frames">
+  <div class="wrap grid">
+    <div class="r">
+      <h2>What I <span class="v">think</span></h2>
+      <p class="sub">Two frameworks on their way to becoming books, and one belief about speed.</p>
+      <p class="quote">"What founders hire me for: telling them what they do not want to hear, early enough to do something about it."</p>
+    </div>
+    <div class="r">
+      <div class="frame">
+        <b>Exit Without <span class="v">Execution</span></b>
+        <p>Validate the commercial thesis on paper first. Funnel, conversion, pricing, revenue, IP. Especially in hardware, where execution costs the most and a wrong thesis costs everything.</p>
+        <small>Framework in use. Book in development.</small>
+      </div>
+      <div class="frame">
+        <b>The <span class="v">99% Club</span></b>
+        <p>The predictable ways founders disqualify themselves from the one percent: loving the solution before the problem, building a product when the customer wanted a service, skipping the pricing test.</p>
+        <small>Drawn from seven ventures. Book planned.</small>
+      </div>
+      <div class="frame">
+        <b>Stack and <span class="v">ship</span></b>
+        <p>Stacked strategies and stacked tools mean "I wonder" can become "here, take a look" in hours, not quarters. Fast start means slow and focused: do one small thing brilliantly, then compound.</p>
+        <small>How I work, every day.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="box r">
+      <div>
+        <h2>Book to Blueprint</h2>
+        <p>My YouTube channel. One book, one actionable blueprint, under ten minutes. Founder and operator books, personal development, strategy. Three episodes a week.</p>
+      </div>
+      <a class="btn btn-white cta" href="https://www.youtube.com/@reza-larimi" target="_blank" rel="noopener">Watch on YouTube <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="record" class="record">
+  <div class="wrap">
+    <div class="head r">
+      <h2>Track <span class="v">record</span></h2>
+      <p class="sub">Seven ventures, three CTO seats, one lab. Newest first.</p>
+    </div>
+    <div class="roles">
+      <div class="role r"><time>2025, now</time><div><b>WearTech Labs, SFU</b><span>Research Engineering Manager, wearable technology core facility.</span></div></div>
+      <div class="role r"><time>2023, 2025</time><div><b>GutPlans</b><span>CEO and co-founder. Food tech. A deliberate 45-day validation sprint, concluded with assets and learnings carried forward.</span></div></div>
+      <div class="role r"><time>2022</time><div><b>ForthGrid</b><span>CTO and co-founder. Autonomous precision machining for frontier industries. Angel and VC funded.</span></div></div>
+      <div class="role r"><time>2021, 2022</time><div><b>Entrepreneur First</b><span>Founder in residence, Toronto.</span></div></div>
+      <div class="role r"><time>2019, now</time><div><b>New Element Research and Development</b><span>Fractional CTO and hardware advisor. Patented sound jammer to volume production, first continuous ICF molding machine, IP68 industrial systems.</span></div></div>
+      <div class="role r"><time>2016, 2020</time><div><b>Orchard Technologies</b><span>CTO and co-founder. Metal additive manufacturing, venture backed.</span></div></div>
+      <div class="role r"><time>2017, 2019</time><div><b>Global Heat Transfer</b><span>R&amp;D product lead. Patented IoT monitoring for industrial heat exchangers.</span></div></div>
+      <div class="role r"><time>2015, 2017</time><div><b>University of British Columbia</b><span>Research assistant. Stretchable sensors, adaptive control, robotic hands.</span></div></div>
     </div>
   </div>
 </section>
@@ -223,8 +368,8 @@
 <section id="book" class="book">
   <div class="wrap grid">
     <div class="r">
-      <h2>Book a call</h2>
-      <p class="sub" style="margin-bottom:0">Thirty minutes, online. Bring a problem, a project or an idea.</p>
+      <h2>Book a <span class="v">call</span></h2>
+      <p class="sub">Thirty minutes, online. Bring a venture, a hardware problem or a question you have been sitting on.</p>
       <ul>
         <li><a href="mailto:reza.larimi@gmail.com">reza.larimi@gmail.com</a><small>Email</small></li>
         <li><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">linkedin.com/in/larimi</a><small>LinkedIn</small></li>
@@ -232,9 +377,7 @@
       </ul>
     </div>
     <div class="cal r" id="cal-inline">
-      <div class="cal-fallback">
-        <p>Pick a time at <a href="https://cal.com/rezalarimi/intro" style="border-bottom:1px solid currentColor">cal.com/rezalarimi/intro</a></p>
-      </div>
+      <div class="cal-fallback"><p>Pick a time at <a href="https://cal.com/rezalarimi/intro">cal.com/rezalarimi/intro</a></p></div>
     </div>
   </div>
 </section>
@@ -247,21 +390,18 @@
 </footer>
 
 <script>
-  // Reveal on scroll (IntersectionObserver, no scroll listeners)
   (function(){
-    var els=document.querySelectorAll('.r');
+    var els=document.querySelectorAll('.r:not(.in)');
     if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
-    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.15});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
     els.forEach(function(e){io.observe(e)});
   })();
-  // Cal.com inline embed
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   var CAL_READY = false; // flip to true once cal.com/rezalarimi/intro exists
   if (CAL_READY) {
-  Cal("init", "intro", {origin:"https://app.cal.com"});
-  var dark = matchMedia('(prefers-color-scheme: dark)').matches;
-  Cal.ns.intro("inline", { elementOrSelector:"#cal-inline", calLink: "rezalarimi/intro", layout: "month_view", config: {theme: dark ? "dark" : "light"} });
-  Cal.ns.intro("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#2b4bd6"},"dark":{"cal-brand":"#8aa0ff"}}});
+    Cal("init", "intro", {origin:"https://app.cal.com"});
+    Cal.ns.intro("inline", { elementOrSelector:"#cal-inline", calLink: "rezalarimi/intro", layout: "month_view", config: {theme: "dark"} });
+    Cal.ns.intro("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#6565fd"},"dark":{"cal-brand":"#9293fa"}}});
   }
 </script>
 </body>
