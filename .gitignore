@@ -1,2 +1,10 @@
 PHOTO-SHOT-LIST.md
 assets/reza-face.jpg
+variants/
+assets/bw/*
+!assets/bw/listen-soft.jpg
+!assets/bw/glass-soft.jpg
+assets/btb-mark.png
+assets/btb-mark-alpha.png
+assets/og-final.jpg
+assets/og-bw.jpg

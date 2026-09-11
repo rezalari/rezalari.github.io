@@ -11,397 +11,485 @@
 <meta property="og:image" content="https://rezalari.github.io/assets/og.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0a0f">
+<meta name="theme-color" content="#f3f2ee">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/hero.jpg" media="(min-width:700px)">
-<link rel="preload" as="image" href="assets/hero-mobile.jpg" media="(max-width:699px)">
+<link rel="preload" as="image" href="assets/bw/listen-soft.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Reza Larimi","jobTitle":"Fractional CTO and Founder Coach","worksFor":{"@type":"Organization","name":"WearTech Labs, Simon Fraser University"},"url":"https://rezalari.github.io/","sameAs":["https://www.linkedin.com/in/larimi/","https://github.com/rezalari","https://www.youtube.com/@reza-larimi"],"address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"email":"mailto:reza.larimi@gmail.com"}
 </script>
 <style>
+  /* Final synthesis. Printed manifesto on paper: one off-white, one off-black, greys.
+     Anton uppercase carries the Book to Blueprint thumbnail language, Geist carries everything else.
+     Hairlines only where they separate real cells. Radius 0 everywhere. One switch to ink at the close. */
   :root{
-    --ink:#0b0a0f; --ink-2:#4a4856; --ink-3:#7d7a8a;
-    --paper:#f7f6fb; --paper-2:#eeecf7; --line:#e1dfea;
-    --violet:#6565fd; --violet-2:#4f4fe0; --violet-soft:#e6e6ff; --lav:#ccc8d3;
-    --on-dark:#f5f4fa; --on-dark-2:rgba(245,244,250,.72);
-    --radius:18px; --radius-sm:12px; --ease:cubic-bezier(.16,1,.3,1);
+    --paper:#f3f2ee; --paper-2:#e9e8e3; --ink:#141414; --ink-2:#4a4a4a; --ink-3:#6b6b6b; --line:rgba(20,20,20,.22);
+    --on:#f3f2ee; --on-2:rgba(243,242,238,.72); --on-3:rgba(243,242,238,.55); --line-on:rgba(243,242,238,.22);
+    --display:"Anton","Impact","Arial Narrow Bold","Arial Narrow",sans-serif;
+    --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --pad:20px; --nav:64px; --max:1360px;
+    color-scheme:light;
   }
+  @media(min-width:768px){:root{--pad:48px}}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;background:var(--paper);-webkit-text-size-adjust:100%}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
   img{display:block;max-width:100%}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
-  @media(min-width:768px){.wrap{padding:0 40px}}
+  h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+  ul,ol{padding:0;list-style:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  section,header{scroll-margin-top:var(--nav)}
 
-  /* buttons */
-  .btn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 8px 0 22px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap;transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}
-  .btn:active{transform:scale(.98)}
-  .btn .arrow{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:999px;transition:transform .3s var(--ease)}
-  .btn:hover .arrow{transform:translateX(3px)}
-  .btn-violet{background:var(--violet);color:#fff}
-  .btn-violet .arrow{background:#fff;color:var(--violet)}
-  .btn-violet:hover{background:var(--violet-2)}
-  .btn-glass{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-  .btn-glass .arrow{background:#fff;color:var(--ink)}
-  .btn-glass:hover{background:rgba(255,255,255,.2)}
-  .btn-plain{padding:0 22px;border:1px solid var(--line);color:var(--ink)}
-  .btn-plain:hover{border-color:var(--ink-3)}
+  /* type */
+  .display{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+  h2.display{font-size:clamp(44px,5.6vw,80px);margin-bottom:22px}
+  .sub{max-width:56ch;color:var(--ink-2);font-size:18px}
+  .statement{font-size:clamp(22px,2.2vw,30px);line-height:1.3;letter-spacing:-.012em;font-weight:500;max-width:40ch}
+  .statement .g{color:var(--ink-3)}
 
-  /* nav (floating pill over hero) */
-  .nav{position:absolute;top:18px;left:0;right:0;z-index:10}
-  .nav .bar{max-width:1200px;margin:0 auto;padding:0 16px}
-  .nav .pill{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 10px 0 22px;border-radius:999px;background:rgba(12,11,18,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff}
-  .brand{font-weight:600;letter-spacing:-.01em}
-  .links{display:none;gap:30px;font-size:15px;color:rgba(255,255,255,.78)}
-  .links a:hover{color:#fff}
-  @media(min-width:860px){.links{display:flex}}
-  .nav .btn{height:44px;padding:0 6px 0 18px;font-size:14px}
-  .nav .btn .arrow{width:30px;height:30px}
+  /* buttons: one label for the booking intent everywhere; inverted inside the ink block */
+  .btn{--bg:var(--ink);--fg:var(--paper);display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 22px;background:var(--bg);color:var(--fg);border:1px solid var(--bg);font-weight:500;font-size:15px;white-space:nowrap;transition:background .2s var(--ease),color .2s var(--ease)}
+  .btn:hover{background:transparent;color:var(--bg)}
+  .btn:active{transform:translateY(1px)}
+  .btn .ar{transition:transform .25s var(--ease)}
+  .btn:hover .ar{transform:translateX(3px)}
+  .btn-sm{height:40px;padding:0 16px;font-size:14px;gap:10px}
+  .btn.ghost{background:transparent;color:var(--bg)}
+  .btn.ghost:hover{background:var(--bg);color:var(--fg)}
+  .dark .btn{--bg:var(--on);--fg:var(--ink)}
 
-  /* hero */
-  .hero{position:relative;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-dark);background:var(--ink);overflow:hidden}
-  .hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%}
-  .hero .shade{position:absolute;inset:0;background:
-    linear-gradient(90deg,rgba(11,10,15,.86) 0%,rgba(11,10,15,.62) 38%,rgba(11,10,15,.12) 72%,rgba(11,10,15,.35) 100%),
-    linear-gradient(180deg,rgba(11,10,15,.35) 0%,rgba(11,10,15,0) 35%,rgba(11,10,15,.55) 78%,rgba(11,10,15,.92) 100%)}
-  .hero .content{position:relative;padding:150px 0 40px}
-  @media(min-width:960px){.hero .content{padding:170px 0 56px}}
-  h1{font-size:clamp(40px,6vw,74px);line-height:1;letter-spacing:-.035em;font-weight:600;margin:0 0 26px;max-width:12ch}
-  .hero-row{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center;margin-bottom:64px}
-  .lede{margin:0;max-width:34ch;color:var(--on-dark-2);font-size:16px;line-height:1.5}
-  .stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 16px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
-  @media(min-width:860px){.stats{grid-template-columns:repeat(4,1fr)}}
-  .stat{display:flex;gap:14px;align-items:flex-start}
-  .stat i{flex:none;width:40px;height:40px;border-radius:999px;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:12px;color:rgba(255,255,255,.8)}
-  .stat b{display:block;font-size:22px;letter-spacing:-.02em;line-height:1.1;font-weight:600}
-  .stat span{font-size:13px;color:var(--on-dark-2)}
+  /* nav: sticky paper bar, turns to ink while it sits over the closing block */
+  .nav{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--nav)}
+  .brand{font-weight:600;letter-spacing:-.01em;font-size:16px}
+  .links{display:none;gap:30px;font-size:15px;color:var(--ink-2)}
+  .links a:hover{color:var(--ink)}
+  @media(min-width:900px){.links{display:flex}}
+  .nav .btn{display:none}
+  @media(min-width:600px){.nav .btn{display:inline-flex}}
+  .nav.on-ink{background:var(--ink);color:var(--on);border-bottom-color:var(--line-on)}
+  .nav.on-ink .links{color:var(--on-2)}
+  .nav.on-ink .links a:hover{color:var(--on)}
+  .nav.on-ink .btn{--bg:var(--on);--fg:var(--ink)}
 
-  /* light sections */
+  /* hero: type block on paper, then one full-bleed halftone band that fills the rest of the viewport */
+  .hero{min-height:calc(100dvh - var(--nav));display:flex;flex-direction:column}
+  .hero-type{width:100%;padding-block:36px}
+  @media(min-width:960px){.hero-type{padding-block:44px 40px}}
+  h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(52px,9.6vw,140px);line-height:.9;letter-spacing:.01em;text-wrap:balance}
+  @media(max-width:599px){h1{font-size:min(13.3vw,60px)}}
+  .rev{position:relative;z-index:0;padding:0 .08em;margin:0 .02em}
+  .anton .rev{color:var(--paper)}
+  .anton .rev::before{content:"";position:absolute;left:0;right:0;top:.27em;bottom:.23em;background:var(--ink);z-index:-1}
+  .hero-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px 40px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+  .lede{max-width:46ch;font-size:18px;line-height:1.45;color:var(--ink-2)}
+  .hero-img{flex:1;min-height:340px;position:relative;background:var(--ink)}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 28%}
+
+  /* stats: four hard numbers directly under the band, hairlines between cells only */
+  .stats{border-bottom:1px solid var(--line)}
+  .stats dl{display:grid;grid-template-columns:1fr 1fr}
+  .stats div{padding:26px 20px 28px 0}
+  .stats div:nth-child(2n){border-left:1px solid var(--line);padding-left:24px}
+  .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  @media(min-width:768px){
+    .stats dl{grid-template-columns:repeat(4,1fr)}
+    .stats div{padding:34px 24px 36px 0}
+    .stats div:nth-child(n+3){border-top:0}
+    .stats div:not(:first-child){border-left:1px solid var(--line);padding-left:28px}
+  }
+  .stats dt{font-family:var(--display);font-size:clamp(52px,5vw,72px);line-height:1;letter-spacing:.01em}
+  .stats dd{margin-top:8px;font-size:15px;color:var(--ink-2);max-width:22ch}
+
+  /* names strip: calm sentence case, one hairline between the label cell and the list cell */
+  .names{border-bottom:1px solid var(--line)}
+  .names .wrap{display:grid;gap:10px 0;padding-top:22px;padding-bottom:22px}
+  .names-label{font-size:14px;color:var(--ink-3)}
+  .names-list{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:16px;font-weight:500;color:var(--ink-2)}
+  @media(min-width:900px){
+    .names .wrap{grid-template-columns:3fr 9fr;gap:0;padding-top:0;padding-bottom:0}
+    .names-label{padding:26px 24px 26px 0;display:flex;align-items:center}
+    .names-list{padding:24px 0 24px 32px;border-left:1px solid var(--line);align-items:center}
+  }
+
+  /* sections */
   section{padding:80px 0}
-  @media(min-width:960px){section{padding:112px 0}}
-  h2{font-size:clamp(30px,3.6vw,46px);line-height:1.06;letter-spacing:-.03em;font-weight:500;margin:0 0 16px}
-  h2 .v{color:var(--violet)}
-  .sub{color:var(--ink-2);max-width:56ch;margin:0;font-size:17px}
-  .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px;margin-bottom:44px}
+  @media(min-width:960px){section{padding:120px 0}}
+  .ruled{border-top:1px solid var(--line)}
 
-  .names{background:linear-gradient(180deg,#fff 0%,var(--paper) 100%);border-bottom:1px solid var(--line);padding:44px 0}
-  .names p{margin:0 0 22px;text-align:center;color:var(--ink-3);font-size:14px}
-  .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-  .track{display:flex;gap:14px;width:max-content;animation:slide 38s linear infinite}
-  .track span{white-space:nowrap;padding:12px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-2);font-size:15px;font-weight:500}
-  @keyframes slide{to{transform:translateX(-50%)}}
-  @media(prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.marquee{mask-image:none;-webkit-mask-image:none}}
+  /* about: headline on top, then statement and modes beside a 4:5 portrait */
+  .about h2{max-width:1000px}
+  .about-grid{display:grid;gap:40px;margin-top:36px}
+  .about-fig{position:relative;aspect-ratio:4/5;overflow:hidden;background:#d6d5d0;max-width:520px}
+  .about-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 20%}
+  @media(min-width:960px){
+    .about-grid{grid-template-columns:7fr 5fr;grid-template-rows:auto 1fr;column-gap:88px;row-gap:0;align-items:start;margin-top:48px}
+    .about-grid .statement{grid-column:1;grid-row:1}
+    .about-fig{grid-column:2;grid-row:1/3;max-width:none}
+    .about-more{grid-column:1;grid-row:2}
+  }
+  .modes{margin-top:44px;display:grid;gap:12px 40px}
+  @media(min-width:700px){.modes{grid-template-columns:180px 1fr}}
+  .modes p{font-weight:500;padding-top:14px}
+  .modes li{padding:14px 0;border-top:1px solid var(--line);color:var(--ink-2);font-size:16px}
+  .about .btn{margin-top:44px}
 
-  /* about split */
-  .about{background:radial-gradient(1200px 500px at 20% 0%,var(--violet-soft) 0%,transparent 60%),var(--paper)}
-  .about .grid{display:grid;gap:44px;align-items:center}
-  @media(min-width:960px){.about .grid{grid-template-columns:6fr 6fr;gap:72px}}
-  .about p{color:var(--ink-2);margin:0 0 18px;max-width:52ch}
-  .about .facts{display:grid;gap:10px;margin:28px 0 34px;padding:0;list-style:none}
-  .about .facts li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
-  .about .facts li::before{content:"";flex:none;width:8px;height:8px;border-radius:999px;background:var(--violet);margin-top:9px}
-  .figure{position:relative}
-  .figure .main{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;max-width:460px;margin:0 auto;background:var(--paper-2)}
-  .figure .main img{width:100%;height:100%;object-fit:cover}
-  .figure .card{position:absolute;right:0;bottom:-18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:0 20px 50px rgba(60,50,120,.12);max-width:250px}
-  @media(min-width:960px){.figure .card{right:-24px;bottom:28px}}
-  .figure .card b{display:block;font-size:15px;margin-bottom:4px}
-  .figure .card span{font-size:14px;color:var(--ink-2)}
+  /* how I help: numbered, one lead offer with a dot field, then a ruled 2x2 */
+  .offers{margin-top:56px;display:grid;border-top:1px solid var(--line)}
+  .offer{position:relative;border-bottom:1px solid var(--line);padding:28px 0 40px;display:grid;grid-template-columns:52px 1fr;gap:6px 20px;align-items:start}
+  .offer-lead{grid-column:1/-1;background:var(--paper-2);padding:32px 24px 44px 20px}
+  .offer-lead::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,var(--ink) 1px,transparent 1.4px);background-size:9px 9px;opacity:.16;-webkit-mask-image:linear-gradient(105deg,transparent 60%,var(--ink) 100%);mask-image:linear-gradient(105deg,transparent 60%,var(--ink) 100%)}
+  .offer-lead>*{position:relative;z-index:1}
+  .num{font-family:var(--display);font-size:40px;line-height:.9;color:var(--ink-3);padding-top:2px}
+  .offer h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;font-size:32px;line-height:.95}
+  .offer-lead h3{font-size:clamp(32px,4.2vw,56px)}
+  .offer .lead{margin-top:12px;font-weight:500;font-size:17px;color:var(--ink);max-width:46ch}
+  .offer p:not(.lead){margin-top:8px;color:var(--ink-2);font-size:16px;max-width:46ch}
+  .offer-lead p:not(.lead){max-width:54ch}
+  @media(min-width:860px){
+    .offers{grid-template-columns:1fr 1fr}
+    .offer{padding:32px 0 48px}
+    .offer:not(.offer-lead):nth-child(even){padding-right:40px}
+    .offer:not(.offer-lead):nth-child(odd){border-left:1px solid var(--line);padding-left:40px}
+    .offer-lead{padding:44px 40px 60px 32px}
+    .offer-lead .num{font-size:48px}
+  }
 
-  /* services */
-  .cards{display:grid;gap:16px}
-  @media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
-  .card{border-radius:var(--radius);padding:26px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:16px;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
-  .card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(60,50,120,.12)}
-  .card.feature{background:var(--violet);color:#fff;border-color:var(--violet)}
-  .card .img{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:16/10;background:var(--paper-2)}
-  .card .img img{width:100%;height:100%;object-fit:cover}
-  .card h3{margin:0;font-size:21px;letter-spacing:-.02em;font-weight:600}
-  .card p{margin:0;color:var(--ink-2);font-size:15px}
-  .card.feature p{color:rgba(255,255,255,.8)}
-  .card .n{font-family:"Geist Mono",monospace;font-size:12px;color:var(--ink-3)}
-  .card.feature .n{color:rgba(255,255,255,.7)}
+  /* what I think: the quote, then three frameworks as ruled 5/7 rows */
+  .quote{font-size:clamp(24px,2.6vw,36px);line-height:1.25;letter-spacing:-.015em;font-weight:500;max-width:34ch;margin-top:44px}
+  .frames{margin-top:64px;border-top:1px solid var(--line)}
+  .frame{display:grid;gap:14px 48px;padding:36px 0;border-bottom:1px solid var(--line)}
+  @media(min-width:900px){.frame{grid-template-columns:5fr 7fr;padding:44px 0}}
+  .frame h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(38px,4.6vw,66px);line-height:.92;letter-spacing:.01em}
+  .frame p{color:var(--ink-2);font-size:17px;max-width:52ch}
+  .frame small{display:block;margin-top:14px;font-size:13px;color:var(--ink-3)}
 
-  /* help: 2x2 with one feature */
-  .help{display:grid;gap:16px}
-  @media(min-width:760px){.help{grid-template-columns:repeat(2,1fr)}}
-  .help .card.wide{grid-column:1/-1;display:grid;gap:22px;align-items:center}
-  @media(min-width:760px){.help .card.wide{grid-template-columns:1.1fr 1fr}}
-  .help .card.wide .img{aspect-ratio:16/9}
-  .help .card .k{font-family:"Geist Mono",monospace;font-size:12px;color:var(--violet)}
-  .help .card.feature .k{color:rgba(255,255,255,.8)}
+  /* Book to Blueprint: the mark as itself, giant type with one hollow word, the channel thumbnail language */
+  .btb-grid{display:grid;gap:40px;align-items:center}
+  @media(min-width:900px){.btb-grid{grid-template-columns:6fr 6fr;gap:80px}}
+  .mark{width:100%;max-width:600px;height:auto}
+  .giant{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.9;font-size:clamp(56px,8.4vw,120px);letter-spacing:.01em}
+  .giant .o{display:block;color:transparent;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill}
+  @supports not (-webkit-text-stroke:1px black){.giant .o{color:var(--ink-3)}}
+  .btb .statement{margin-top:24px}
+  .btb .sub{margin-top:18px}
+  .btb .btn{margin-top:30px}
 
-  /* frameworks manifesto */
-  .frames{background:var(--paper-2)}
-  .frames .grid{display:grid;gap:36px}
-  @media(min-width:960px){.frames .grid{grid-template-columns:5fr 7fr;gap:72px;align-items:start}}
-  .frame{padding:26px 0;border-top:1px solid var(--line)}
-  .frame:last-child{border-bottom:1px solid var(--line)}
-  .frame b{display:block;font-size:24px;letter-spacing:-.02em;font-weight:600;margin-bottom:8px}
-  .frame b .v{color:var(--violet)}
-  .frame p{margin:0;color:var(--ink-2)}
-  .frame small{display:block;margin-top:10px;font-family:"Geist Mono",monospace;font-size:12px;color:var(--ink-3)}
-  .quote{font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.02em;font-weight:500;margin:22px 0 0;max-width:22ch}
+  /* track record: eight roles in a ruled 4x2 grid, lines only between cells */
+  .roles{margin-top:56px;display:grid;border-top:1px solid var(--line)}
+  .roles li{padding:20px 0 34px;border-bottom:1px solid var(--line)}
+  .roles .when{display:block;font-size:13px;color:var(--ink-3);margin-bottom:14px;font-variant-numeric:tabular-nums}
+  .roles b{display:block;font-weight:600;font-size:17px;line-height:1.3;margin-bottom:6px}
+  .roles .what{font-size:15px;color:var(--ink-2)}
+  @media(min-width:640px){
+    .roles{grid-template-columns:1fr 1fr}
+    .roles li:nth-child(2n){border-left:1px solid var(--line);padding-left:32px}
+    .roles li:nth-child(2n+1){padding-right:32px}
+  }
+  @media(min-width:1024px){
+    .roles{grid-template-columns:repeat(4,1fr)}
+    .roles li:nth-child(n){padding:20px 32px 34px;border-left:1px solid var(--line)}
+    .roles li:nth-child(4n+1){border-left:0;padding-left:0}
+    .roles li:nth-child(4n){padding-right:0}
+  }
 
-  /* band */
-  .band{padding:0 0 80px}
-  @media(min-width:960px){.band{padding:0 0 112px}}
-  .band .box{border-radius:calc(var(--radius) + 6px);background:linear-gradient(135deg,#1a1730 0%,#2a2666 55%,var(--violet) 130%);color:#fff;padding:40px 28px;display:grid;gap:26px;align-items:center;overflow:hidden;position:relative}
-  @media(min-width:900px){.band .box{grid-template-columns:7fr 5fr;padding:56px 60px}}
-  .band h2{color:#fff;margin-bottom:12px}
-  .band p{color:rgba(255,255,255,.78);margin:0;max-width:52ch}
-  .band .cta{justify-self:start}
-  @media(min-width:900px){.band .cta{justify-self:end}}
-  .band .btn-white{background:#fff;color:var(--ink)}
-  .band .btn-white .arrow{background:var(--violet);color:#fff}
+  /* the one switch to ink: book a call, then the footer */
+  .dark{background:var(--ink);color:var(--on);color-scheme:dark}
+  .dark .sub{color:var(--on-2)}
+  .book{padding:88px 0 96px}
+  @media(min-width:960px){.book{padding:120px 0}}
+  .book-grid{display:grid;gap:44px}
+  @media(min-width:960px){.book-grid{grid-template-columns:5fr 7fr;gap:80px;align-items:start}}
+  .contacts{margin-top:40px;border-top:1px solid var(--line-on)}
+  .contacts li{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line-on);font-size:16px}
+  .contacts small{font-size:13px;color:var(--on-3);padding-top:3px}
+  .contacts a{border-bottom:1px solid var(--line-on);word-break:break-word}
+  .contacts a:hover{border-color:var(--on)}
+  .cal{min-height:600px;border:1px solid var(--line-on)}
+  .cal-fallback{padding:44px;text-align:center;color:var(--on-2)}
+  .cal:has(cal-inline) .cal-fallback,.cal:has(iframe) .cal-fallback,.cal.mounted .cal-fallback{display:none}
+  .cal-fallback a{color:var(--on);border-bottom:1px solid var(--line-on)}
 
-  /* record */
-  .record{background:var(--paper)}
-  .roles{display:grid;gap:14px}
-  @media(min-width:760px){.roles{grid-template-columns:repeat(2,1fr)}}
-  .role{display:grid;grid-template-columns:96px 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px}
-  .role time{font-family:"Geist Mono",monospace;font-size:13px;color:var(--ink-3);padding-top:3px}
-  .role b{display:block;font-weight:600}
-  .role span{color:var(--ink-2);font-size:15px}
-
-  /* process */
-  .steps{display:grid;gap:0;border-top:1px solid var(--line)}
-  .step{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
-  @media(min-width:860px){.step{grid-template-columns:56px 260px 1fr;gap:32px}}
-  .step i{font-style:normal;font-family:"Geist Mono",monospace;font-size:13px;color:var(--violet)}
-  .step b{font-size:19px;letter-spacing:-.01em;font-weight:600}
-  .step p{margin:0;color:var(--ink-2);grid-column:2/-1}
-  @media(min-width:860px){.step p{grid-column:auto}}
-
-  /* book (dark bookend) */
-  .book{background:var(--ink);color:var(--on-dark);background-image:radial-gradient(900px 400px at 80% 0%,rgba(101,101,253,.35),transparent 60%)}
-  .book .grid{display:grid;gap:36px}
-  @media(min-width:960px){.book .grid{grid-template-columns:5fr 7fr;gap:64px;align-items:start}}
-  .book h2{color:#fff}
-  .book .sub{color:var(--on-dark-2)}
-  .book ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
-  .book li a{border-bottom:1px solid rgba(255,255,255,.25)}
-  .book li a:hover{border-color:#fff}
-  .book li small{display:block;color:var(--on-dark-2);font-size:13px;margin-top:2px}
-  .cal{min-height:560px;border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12)}
-  .cal-fallback{padding:44px;text-align:center;color:var(--on-dark-2)}
-  .cal-fallback a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
-
-  footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:26px 0;border-top:1px solid rgba(255,255,255,.1)}
+  footer{color:var(--on-3);font-size:14px;padding:28px 0;border-top:1px solid var(--line-on)}
   footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
-  footer a:hover{color:#fff}
+  footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+  footer a:hover{color:var(--on)}
 
-  /* reveal */
-  .r{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  /* motion: reveal classes are added by JS only, the hero settles on load, everything honours reduced motion */
+  .r{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
   .r.in{opacity:1;transform:none}
-  .hero .r{transition-delay:.15s}
-  @media (prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  @media(prefers-reduced-motion:no-preference){
+    .js .hero-type>*{animation:rise .9s var(--ease) both}
+    .js .hero-type>*:nth-child(2){animation-delay:.12s}
+    .js .hero-img{animation:fade 1s var(--ease) both;animation-delay:.25s}
+  }
+  @media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="#top">Reza Larimi</a>
+    <div class="links"><a href="#about">About</a><a href="#help">How I help</a><a href="#thinking">Thinking</a><a href="#record">Track record</a></div>
+    <a class="btn btn-sm" href="#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a>
+  </div>
+</nav>
+
+<main>
+
 <header class="hero" id="top">
-  <picture>
-    <source media="(max-width:699px)" srcset="assets/hero-mobile.jpg">
-    <source media="(max-width:1100px)" srcset="assets/hero-960.jpg">
-    <img src="assets/hero.jpg" width="1600" height="900" alt="Reza Larimi at his studio desk" fetchpriority="high">
-  </picture>
-  <div class="shade"></div>
-  <nav class="nav">
-    <div class="bar">
-      <div class="pill">
-        <a class="brand" href="#top">Reza Larimi</a>
-        <div class="links"><a href="#about">About</a><a href="#help">How I help</a><a href="#thinking">Thinking</a><a href="#record">Track record</a></div>
-        <a class="btn btn-glass" href="#book">Book a call <span class="arrow">&rarr;</span></a>
-      </div>
-    </div>
-  </nav>
-  <div class="wrap content">
-    <h1 class="r in">I help founders avoid the 99% Club.</h1>
-    <div class="hero-row r in">
-      <a class="btn btn-violet" href="#book">Book a call <span class="arrow">&rarr;</span></a>
-      <p class="lede">Fractional CTO and founder coach for deep tech hardware. I tell founders what they do not want to hear, early enough to act on it.</p>
-    </div>
-    <div class="stats r in">
-      <div class="stat"><i>19</i><div><b>19+ years</b><span>hardware and mechatronics</span></div></div>
-      <div class="stat"><i>07</i><div><b>7 ventures</b><span>three times CTO</span></div></div>
-      <div class="stat"><i>05</i><div><b>5 patents</b><span>sensors, test beds, methods</span></div></div>
-      <div class="stat"><i>EF</i><div><b>EF alum</b><span>Entrepreneur First, Toronto</span></div></div>
+  <div class="wrap hero-type">
+    <h1>I help founders avoid the <span class="rev">99%</span> Club.</h1>
+    <div class="hero-row">
+      <p class="lede">Fractional CTO and founder coach for deep tech hardware. What you do not want to hear, early enough to act.</p>
+      <a class="btn" href="#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
+  <figure class="hero-img">
+    <img src="assets/bw/listen-soft.jpg" width="1600" height="900" alt="Reza Larimi at a podcast desk, looking into the camera" fetchpriority="high">
+  </figure>
 </header>
+
+<div class="stats">
+  <dl class="wrap" data-reveal="kids">
+    <div><dt>19+</dt><dd>years, hardware and mechatronics</dd></div>
+    <div><dt>7</dt><dd>ventures, three times CTO</dd></div>
+    <div><dt>5</dt><dd>patents: sensors, test beds, methods</dd></div>
+    <div><dt>EF</dt><dd>alum, Entrepreneur First, Toronto</dd></div>
+  </dl>
+</div>
 
 <div class="names">
   <div class="wrap">
-    <p>Companies and institutions I have built with</p>
-    <div class="marquee"><div class="track">
-      <span>WearTech Labs, SFU</span><span>University of British Columbia</span><span>Entrepreneur First</span><span>Orchard Technologies</span><span>ForthGrid</span><span>GutPlans</span><span>Global Heat Transfer</span><span>Vivid Machines</span><span>EOI Technologies</span><span>Pleasant Solutions</span><span>Greenbuilt Group</span>
-      <span>WearTech Labs, SFU</span><span>University of British Columbia</span><span>Entrepreneur First</span><span>Orchard Technologies</span><span>ForthGrid</span><span>GutPlans</span><span>Global Heat Transfer</span><span>Vivid Machines</span><span>EOI Technologies</span><span>Pleasant Solutions</span><span>Greenbuilt Group</span>
-    </div></div>
+    <p class="names-label">Companies and institutions I have built with</p>
+    <ul class="names-list">
+      <li>WearTech Labs, SFU</li><li>University of British Columbia</li><li>Entrepreneur First</li><li>Orchard Technologies</li><li>ForthGrid</li><li>GutPlans</li><li>Global Heat Transfer</li><li>Vivid Machines</li><li>EOI Technologies</li><li>Pleasant Solutions</li><li>Greenbuilt Group</li>
+    </ul>
   </div>
 </div>
 
 <section id="about" class="about">
-  <div class="wrap grid">
-    <div class="figure r">
-      <div class="main"><img src="assets/reza.jpg" srcset="assets/reza-600.jpg 600w, assets/reza.jpg 1200w" sizes="(min-width:960px) 460px, 90vw" width="1200" height="1500" alt="Reza Larimi" loading="lazy"></div>
-      <div class="card"><b>Fractional CTO and founder coach</b><span>Deep tech hardware, Vancouver</span></div>
-    </div>
-    <div class="r">
-      <h2>Meet Reza, the operator who finds out <span class="v">before you build</span></h2>
-      <p>Over 19 years and seven ventures I learned that the biggest risk in a startup is not whether the technology works. It is whether anyone was ever going to pay for it. Most founders find out the hard way, after years and millions. I help them find out faster.</p>
-      <p>I work in four modes:</p>
-      <ul class="facts">
-        <li>Research Engineering Manager at WearTech Labs, Simon Fraser University's wearable technology facility</li>
-        <li>Fractional CTO and hardware advisor through my practice, New Element Research and Development</li>
-        <li>MBA candidate in Innovation and Value Creation at SFU</li>
-        <li>Builder of AI agent systems that turn a question into a shipped, working thing the same day</li>
-      </ul>
-      <a class="btn btn-violet" href="#book">Book a call <span class="arrow">&rarr;</span></a>
+  <div class="wrap">
+    <h2 class="display" data-reveal>Meet Reza, the operator who finds out before you build</h2>
+    <div class="about-grid">
+      <p class="statement" data-reveal>Over 19 years and seven ventures I learned that the biggest risk in a startup is not whether the technology works. It is whether anyone was ever going to pay for it. <span class="g">Most founders find out the hard way, after years and millions. I help them find out faster.</span></p>
+      <figure class="about-fig" data-reveal>
+        <img src="assets/bw/glass-soft.jpg" width="1536" height="1024" alt="Reza Larimi sketching a funnel on a glass wall" fetchpriority="low">
+      </figure>
+      <div class="about-more" data-reveal>
+        <div class="modes">
+          <p>I work in four modes:</p>
+          <ol>
+            <li>Research Engineering Manager at WearTech Labs, Simon Fraser University's wearable technology facility</li>
+            <li>Fractional CTO and hardware advisor through my practice, New Element Research and Development</li>
+            <li>MBA candidate in Innovation and Value Creation at SFU</li>
+            <li>Builder of AI agent systems that turn a question into a shipped, working thing the same day</li>
+          </ol>
+        </div>
+        <a class="btn" href="#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="help">
+<section id="help" class="ruled">
   <div class="wrap">
-    <div class="head r">
-      <h2>How I <span class="v">help</span></h2>
+    <div data-reveal>
+      <h2 class="display">How I help</h2>
       <p class="sub">Five ways to work with me. All of them start with the same question: will anyone pay for this?</p>
     </div>
-    <div class="help">
-      <div class="card wide feature r">
+    <ol class="offers">
+      <li class="offer offer-lead" data-reveal>
+        <span class="num" aria-hidden="true">01</span>
         <div>
-          <span class="k">Venture Validation Sprint</span>
-          <h3 style="margin-top:10px">Exit Without Execution, applied</h3>
-          <p style="margin-top:10px">Thirty to forty-five days to prove or kill a venture thesis on paper: customer, funnel, pricing, revenue model and IP position, before you commit years and capital to building it.</p>
+          <h3>Venture Validation Sprint</h3>
+          <p class="lead">Exit Without Execution, applied.</p>
+          <p>Thirty to forty-five days to prove or kill a venture thesis on paper: customer, funnel, pricing, revenue model and IP position, before you commit years and capital to building it.</p>
         </div>
-        <div class="img"><img src="assets/hero-960.jpg" alt="" loading="lazy"></div>
-      </div>
-      <div class="card r">
-        <span class="k">Fractional CTO</span>
-        <h3>Hardware from prototype to manufacturable product</h3>
-        <p>The hardest phase of deep tech. Design for manufacturing, new product introduction, compliance, supply chain and the team to run it after me.</p>
-      </div>
-      <div class="card r">
-        <span class="k">Technical Due Diligence</span>
-        <h3>For investors and boards</h3>
-        <p>An operator's read on a hardware company: what is real, what is a demo, what it will cost to reach volume, and which risks the deck leaves out.</p>
-      </div>
-      <div class="card r">
-        <span class="k">Founder Coaching</span>
-        <h3>The conversation nobody else will have with you</h3>
-        <p>For founders who want a challenger, not a cheerleader. Positioning, validation, priorities and the patterns that put startups in the 99% Club.</p>
-      </div>
-      <div class="card r">
-        <span class="k">AI Systems</span>
-        <h3>Agents and automation that run every day</h3>
-        <p>Multi-agent pipelines, digital twins and automations wired into the tools a business already uses. Built to run in production, not to demo once.</p>
-      </div>
-    </div>
+      </li>
+      <li class="offer" data-reveal>
+        <span class="num" aria-hidden="true">02</span>
+        <div>
+          <h3>Fractional CTO</h3>
+          <p class="lead">Hardware from prototype to manufacturable product.</p>
+          <p>The hardest phase of deep tech. Design for manufacturing, new product introduction, compliance, supply chain and the team to run it after me.</p>
+        </div>
+      </li>
+      <li class="offer" data-reveal>
+        <span class="num" aria-hidden="true">03</span>
+        <div>
+          <h3>Technical Due Diligence</h3>
+          <p class="lead">For investors and boards.</p>
+          <p>An operator's read on a hardware company: what is real, what is a demo, what it will cost to reach volume, and which risks the deck leaves out.</p>
+        </div>
+      </li>
+      <li class="offer" data-reveal>
+        <span class="num" aria-hidden="true">04</span>
+        <div>
+          <h3>Founder Coaching</h3>
+          <p class="lead">The conversation nobody else will have with you.</p>
+          <p>For founders who want a challenger, not a cheerleader. Positioning, validation, priorities and the patterns that put startups in the 99% Club.</p>
+        </div>
+      </li>
+      <li class="offer" data-reveal>
+        <span class="num" aria-hidden="true">05</span>
+        <div>
+          <h3>AI Systems</h3>
+          <p class="lead">Agents and automation that run every day.</p>
+          <p>Multi-agent pipelines, digital twins and automations wired into the tools a business already uses. Built to run in production, not to demo once.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
-<section id="thinking" class="frames">
-  <div class="wrap grid">
-    <div class="r">
-      <h2>What I <span class="v">think</span></h2>
+<section id="thinking" class="ruled">
+  <div class="wrap">
+    <div data-reveal>
+      <h2 class="display">What I think</h2>
       <p class="sub">Two frameworks on their way to becoming books, and one belief about speed.</p>
-      <p class="quote">"What founders hire me for: telling them what they do not want to hear, early enough to do something about it."</p>
+      <blockquote class="quote"><p>&ldquo;What founders hire me for: telling them what they do not want to hear, early enough to do something about it.&rdquo;</p></blockquote>
     </div>
-    <div class="r">
-      <div class="frame">
-        <b>Exit Without <span class="v">Execution</span></b>
-        <p>Validate the commercial thesis on paper first. Funnel, conversion, pricing, revenue, IP. Especially in hardware, where execution costs the most and a wrong thesis costs everything.</p>
-        <small>Framework in use. Book in development.</small>
-      </div>
-      <div class="frame">
-        <b>The <span class="v">99% Club</span></b>
-        <p>The predictable ways founders disqualify themselves from the one percent: loving the solution before the problem, building a product when the customer wanted a service, skipping the pricing test.</p>
-        <small>Drawn from seven ventures. Book planned.</small>
-      </div>
-      <div class="frame">
-        <b>Stack and <span class="v">ship</span></b>
-        <p>Stacked strategies and stacked tools mean "I wonder" can become "here, take a look" in hours, not quarters. Fast start means slow and focused: do one small thing brilliantly, then compound.</p>
-        <small>How I work, every day.</small>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <div class="box r">
-      <div>
-        <h2>Book to Blueprint</h2>
-        <p>My YouTube channel. One book, one actionable blueprint, under ten minutes. Founder and operator books, personal development, strategy. Three episodes a week.</p>
-      </div>
-      <a class="btn btn-white cta" href="https://www.youtube.com/@reza-larimi" target="_blank" rel="noopener">Watch on YouTube <span class="arrow">&rarr;</span></a>
+    <div class="frames">
+      <article class="frame" data-reveal>
+        <h3>Exit Without Execution</h3>
+        <div>
+          <p>Validate the commercial thesis on paper first. Funnel, conversion, pricing, revenue, IP. Especially in hardware, where execution costs the most and a wrong thesis costs everything.</p>
+          <small>Framework in use. Book in development.</small>
+        </div>
+      </article>
+      <article class="frame" data-reveal>
+        <h3>The 99% Club</h3>
+        <div>
+          <p>The predictable ways founders disqualify themselves from the one percent: loving the solution before the problem, building a product when the customer wanted a service, skipping the pricing test.</p>
+          <small>Drawn from seven ventures. Book planned.</small>
+        </div>
+      </article>
+      <article class="frame" data-reveal>
+        <h3>Stack and ship</h3>
+        <div>
+          <p>Stacked strategies and stacked tools mean &ldquo;I wonder&rdquo; can become &ldquo;here, take a look&rdquo; in hours, not quarters. Fast start means slow and focused: do one small thing brilliantly, then compound.</p>
+          <small>How I work, every day.</small>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="record" class="record">
+<section id="btb" class="btb ruled">
+  <div class="wrap btb-grid">
+    <img class="mark" src="assets/btb-mark-alpha-1200-q.png" width="1200" height="810" alt="Book to Blueprint" fetchpriority="low" data-reveal>
+    <div data-reveal>
+      <h2 class="giant">Book to <span class="o">Blueprint</span></h2>
+      <p class="statement">One book, one actionable blueprint, under ten minutes.</p>
+      <p class="sub">My YouTube channel. Founder and operator books, personal development, strategy. Three episodes a week.</p>
+      <a class="btn ghost" href="https://www.youtube.com/@reza-larimi" target="_blank" rel="noopener">Watch on YouTube <span class="ar" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="record" class="ruled">
   <div class="wrap">
-    <div class="head r">
-      <h2>Track <span class="v">record</span></h2>
+    <div data-reveal>
+      <h2 class="display">Track record</h2>
       <p class="sub">Seven ventures, three CTO seats, one lab. Newest first.</p>
     </div>
-    <div class="roles">
-      <div class="role r"><time>2025, now</time><div><b>WearTech Labs, SFU</b><span>Research Engineering Manager, wearable technology core facility.</span></div></div>
-      <div class="role r"><time>2023, 2025</time><div><b>GutPlans</b><span>CEO and co-founder. Food tech. A deliberate 45-day validation sprint, concluded with assets and learnings carried forward.</span></div></div>
-      <div class="role r"><time>2022</time><div><b>ForthGrid</b><span>CTO and co-founder. Autonomous precision machining for frontier industries. Angel and VC funded.</span></div></div>
-      <div class="role r"><time>2021, 2022</time><div><b>Entrepreneur First</b><span>Founder in residence, Toronto.</span></div></div>
-      <div class="role r"><time>2019, now</time><div><b>New Element Research and Development</b><span>Fractional CTO and hardware advisor. Patented sound jammer to volume production, first continuous ICF molding machine, IP68 industrial systems.</span></div></div>
-      <div class="role r"><time>2016, 2020</time><div><b>Orchard Technologies</b><span>CTO and co-founder. Metal additive manufacturing, venture backed.</span></div></div>
-      <div class="role r"><time>2017, 2019</time><div><b>Global Heat Transfer</b><span>R&amp;D product lead. Patented IoT monitoring for industrial heat exchangers.</span></div></div>
-      <div class="role r"><time>2015, 2017</time><div><b>University of British Columbia</b><span>Research assistant. Stretchable sensors, adaptive control, robotic hands.</span></div></div>
-    </div>
+    <ol class="roles" data-reveal="kids">
+      <li><span class="when">2025, now</span><b>WearTech Labs, SFU</b><span class="what">Research Engineering Manager, wearable technology core facility.</span></li>
+      <li><span class="when">2023, 2025</span><b>GutPlans</b><span class="what">CEO and co-founder. Food tech. A deliberate 45-day validation sprint, concluded with assets and learnings carried forward.</span></li>
+      <li><span class="when">2022</span><b>ForthGrid</b><span class="what">CTO and co-founder. Autonomous precision machining for frontier industries. Angel and VC funded.</span></li>
+      <li><span class="when">2021, 2022</span><b>Entrepreneur First</b><span class="what">Founder in residence, Toronto.</span></li>
+      <li><span class="when">2019, now</span><b>New Element Research and Development</b><span class="what">Fractional CTO and hardware advisor. Patented sound jammer to volume production, first continuous ICF molding machine, IP68 industrial systems.</span></li>
+      <li><span class="when">2016, 2020</span><b>Orchard Technologies</b><span class="what">CTO and co-founder. Metal additive manufacturing, venture backed.</span></li>
+      <li><span class="when">2017, 2019</span><b>Global Heat Transfer</b><span class="what">R&amp;D product lead. Patented IoT monitoring for industrial heat exchangers.</span></li>
+      <li><span class="when">2015, 2017</span><b>University of British Columbia</b><span class="what">Research assistant. Stretchable sensors, adaptive control, robotic hands.</span></li>
+    </ol>
   </div>
 </section>
 
-<section id="book" class="book">
-  <div class="wrap grid">
-    <div class="r">
-      <h2>Book a <span class="v">call</span></h2>
+<section id="book" class="dark book">
+  <div class="wrap book-grid">
+    <div data-reveal>
+      <h2 class="display">Book a call</h2>
       <p class="sub">Thirty minutes, online. Bring a venture, a hardware problem or a question you have been sitting on.</p>
-      <ul>
-        <li><a href="mailto:reza.larimi@gmail.com">reza.larimi@gmail.com</a><small>Email</small></li>
-        <li><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">linkedin.com/in/larimi</a><small>LinkedIn</small></li>
-        <li><a href="https://github.com/rezalari" target="_blank" rel="noopener">github.com/rezalari</a><small>GitHub</small></li>
+      <ul class="contacts">
+        <li><small>Email</small><a href="mailto:reza.larimi@gmail.com">reza.larimi@gmail.com</a></li>
+        <li><small>LinkedIn</small><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">linkedin.com/in/larimi</a></li>
+        <li><small>GitHub</small><a href="https://github.com/rezalari" target="_blank" rel="noopener">github.com/rezalari</a></li>
+        <li><small>YouTube</small><a href="https://www.youtube.com/@reza-larimi" target="_blank" rel="noopener">youtube.com/@reza-larimi</a></li>
       </ul>
     </div>
-    <div class="cal r" id="cal-inline">
+    <div class="cal" id="cal-inline" data-reveal>
       <div class="cal-fallback"><p>Pick a time at <a href="https://cal.com/rezalarimi/intro">cal.com/rezalarimi/intro</a></p></div>
     </div>
   </div>
 </section>
 
-<footer>
+</main>
+
+<footer class="dark">
   <div class="wrap">
     <span>Reza Larimi, Vancouver, Canada</span>
-    <span><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&nbsp; <a href="mailto:reza.larimi@gmail.com">Email</a></span>
+    <nav aria-label="Footer"><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:reza.larimi@gmail.com">Email</a><a href="https://github.com/rezalari" target="_blank" rel="noopener">GitHub</a><a href="https://www.youtube.com/@reza-larimi" target="_blank" rel="noopener">YouTube</a></nav>
   </div>
 </footer>
 
 <script>
   (function(){
-    var els=document.querySelectorAll('.r:not(.in)');
-    if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
-    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
-    els.forEach(function(e){io.observe(e)});
+    var doc=document.documentElement;
+    doc.classList.add('js');
+    /* the reversed 99% block is tuned to Anton's metrics, so it only switches on once Anton is really in use */
+    if(document.fonts&&document.fonts.load){
+      document.fonts.load('400 1em Anton').then(function(f){if(f&&f.length)doc.classList.add('anton')}).catch(function(){});
+    }
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if('IntersectionObserver' in window&&!reduce){
+      var targets=[];
+      document.querySelectorAll('[data-reveal]').forEach(function(el){
+        if(el.getAttribute('data-reveal')==='kids'){
+          Array.prototype.forEach.call(el.children,function(c,i){c.style.transitionDelay=(Math.min(i,3)*50)+'ms';targets.push(c)});
+        }else{targets.push(el)}
+      });
+      targets.forEach(function(e){e.classList.add('r')});
+      var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.1});
+      targets.forEach(function(e){io.observe(e)});
+    }
+    /* the sticky nav follows the ground it sits on: paper over paper, ink over the closing block */
+    var nav=document.querySelector('.nav'),dark=document.querySelector('.dark');
+    if(nav&&dark&&'IntersectionObserver' in window){
+      var navIO=null,t=null;
+      var arm=function(){
+        if(navIO)navIO.disconnect();
+        var h=nav.offsetHeight||64;
+        navIO=new IntersectionObserver(function(en){nav.classList.toggle('on-ink',en[0].isIntersecting)},{rootMargin:'0px 0px -'+Math.max(0,window.innerHeight-h)+'px 0px',threshold:0});
+        navIO.observe(dark);
+      };
+      arm();
+      window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(arm,150)});
+    }
+    /* hide the booking fallback once Cal has mounted, for browsers without :has() */
+    var cal=document.getElementById('cal-inline');
+    if(cal&&'MutationObserver' in window){
+      var mo=new MutationObserver(function(){if(cal.querySelector('cal-inline,iframe')){cal.classList.add('mounted');mo.disconnect()}});
+      mo.observe(cal,{childList:true,subtree:true});
+    }
   })();
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   var CAL_READY = true;
   if (CAL_READY) {
     Cal("init", "intro", {origin:"https://app.cal.com"});
     Cal.ns.intro("inline", { elementOrSelector:"#cal-inline", calLink: "rezalarimi/intro", layout: "month_view", config: {theme: "dark"} });
-    Cal.ns.intro("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#6565fd"},"dark":{"cal-brand":"#9293fa"}}});
+    Cal.ns.intro("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#141414"},"dark":{"cal-brand":"#f3f2ee"}}});
   }
 </script>
 </body>
