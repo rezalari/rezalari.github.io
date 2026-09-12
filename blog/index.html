@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing | Reza Larimi</title>
+<meta name="description" content="Occasional pieces by Reza Larimi on intelligence, hardware, founders and what he is learning. Fractional CTO and founder coach, Vancouver.">
+<link rel="canonical" href="https://rezalarimi.com/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Writing | Reza Larimi">
+<meta property="og:description" content="Occasional pieces on intelligence, hardware, founders and what I am learning.">
+<meta property="og:image" content="https://rezalarimi.com/assets/og.jpg">
+<meta property="og:url" content="https://rezalarimi.com/blog/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@reza_larimi">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#f3f2ee">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Reza Larimi, writing" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","@id":"https://rezalarimi.com/blog/#blog","url":"https://rezalarimi.com/blog/","name":"Reza Larimi, writing","description":"Occasional pieces by Reza Larimi on intelligence, hardware, founders and what he is learning.","inLanguage":"en","author":{"@type":"Person","@id":"https://rezalarimi.com/#reza","name":"Reza Larimi","url":"https://rezalarimi.com/"},"publisher":{"@type":"Person","@id":"https://rezalarimi.com/#reza","name":"Reza Larimi"},"blogPost":[{"@type":"BlogPosting","@id":"https://rezalarimi.com/blog/advanced-intelligence/#post","headline":"Nothing About This Is Artificial: A Perspective on AI as Nature's Next Move","url":"https://rezalarimi.com/blog/advanced-intelligence/","datePublished":"2026-09-12","author":{"@id":"https://rezalarimi.com/#reza"}}]}
+</script>
+<style>
+  :root{
+    --paper:#f3f2ee; --paper-2:#e9e8e3; --ink:#141414; --ink-2:#4a4a4a; --ink-3:#6b6b6b; --line:rgba(20,20,20,.22);
+    --on:#f3f2ee; --on-2:rgba(243,242,238,.72); --on-3:rgba(243,242,238,.55); --line-on:rgba(243,242,238,.22);
+    --display:"Anton","Impact","Arial Narrow Bold","Arial Narrow",sans-serif;
+    --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --pad:20px; --nav:64px; --max:1360px;
+    color-scheme:light;
+  }
+  @media(min-width:768px){:root{--pad:48px}}
+  *{box-sizing:border-box}
+  html{background:var(--paper);-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  main{flex:1}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+  h1,h2,h3,p,ul,ol{margin:0}
+  ul,ol{padding:0;list-style:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+  .btn{--bg:var(--ink);--fg:var(--paper);display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 22px;background:var(--bg);color:var(--fg);border:1px solid var(--bg);font-weight:500;font-size:15px;white-space:nowrap;transition:background .2s var(--ease),color .2s var(--ease)}
+  .btn:hover{background:transparent;color:var(--bg)}
+  .btn .ar{transition:transform .25s var(--ease)}
+  .btn:hover .ar{transform:translateX(3px)}
+  .btn-sm{height:40px;padding:0 16px;font-size:14px;gap:10px}
+
+  .nav{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--nav)}
+  .brand{font-weight:600;letter-spacing:-.01em;font-size:16px}
+  .links{display:none;gap:30px;font-size:15px;color:var(--ink-2)}
+  .links a:hover,.links a[aria-current]{color:var(--ink)}
+  @media(min-width:900px){.links{display:flex}}
+  .nav .btn{display:none}
+  @media(min-width:600px){.nav .btn{display:inline-flex}}
+
+  .head{padding:56px 0 40px}
+  @media(min-width:960px){.head{padding:88px 0 56px}}
+  h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(52px,7vw,108px);line-height:.92;letter-spacing:.01em}
+  .sub{margin-top:22px;max-width:56ch;color:var(--ink-2);font-size:18px}
+  .sub a{border-bottom:1px solid var(--line)}
+  .sub a:hover{border-color:var(--ink)}
+
+  /* posts as ruled rows: date cell, then title, standfirst and read link */
+  .posts{border-top:1px solid var(--line);margin-bottom:96px}
+  @media(min-width:960px){.posts{margin-bottom:140px}}
+  .post{display:grid;gap:12px 48px;padding:32px 0 40px;border-bottom:1px solid var(--line)}
+  @media(min-width:900px){.post{grid-template-columns:3fr 9fr;padding:44px 0 52px}}
+  .post time{font-size:14px;color:var(--ink-3);font-variant-numeric:tabular-nums;padding-top:6px}
+  .post h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(34px,4.4vw,64px);line-height:.92;letter-spacing:.01em;max-width:18ch;text-wrap:balance}
+  .post h2 a:hover{color:var(--ink-2)}
+  .post p{margin-top:16px;color:var(--ink-2);font-size:17px;max-width:56ch}
+  .post .read{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-weight:500;font-size:15px;border-bottom:1px solid var(--line)}
+  .post .read:hover{border-color:var(--ink)}
+  .post .read:hover .ar{transform:translateX(3px)}
+  .post .ar{transition:transform .25s var(--ease)}
+
+  .dark{background:var(--ink);color:var(--on);color-scheme:dark}
+  footer{color:var(--on-3);font-size:14px;padding:28px 0;border-top:1px solid var(--line-on)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+  footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+  footer a:hover{color:var(--on)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="../">Reza Larimi</a>
+    <div class="links"><a href="../#about">About</a><a href="../#help">How I help</a><a href="../#thinking">Thinking</a><a href="./" aria-current="page">Writing</a><a href="../#faq">Questions</a></div>
+    <a class="btn btn-sm" href="../#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a>
+  </div>
+</nav>
+
+<main>
+  <header class="head">
+    <div class="wrap">
+      <h1>Writing</h1>
+      <p class="sub">Occasional pieces on intelligence, hardware, founders and what I am learning. Once in a while, not on a schedule. <a href="feed.xml">RSS</a>.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <ol class="posts">
+      <li class="post">
+        <time datetime="2026-09-12">12 September 2026</time>
+        <div>
+          <h2><a href="advanced-intelligence/">Nothing about this is artificial</a></h2>
+          <p>A perspective on AI as nature's next move. Advanced intelligence, not artificial intelligence: silicon, lithium and energy arranged by creatures made of minerals and energy, and why life has no stop button.</p>
+          <a class="read" href="advanced-intelligence/">Read the piece <span class="ar" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </li>
+    </ol>
+  </div>
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <span>Reza Larimi, Vancouver, Canada</span>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/reza_larimi" target="_blank" rel="noopener">X</a><a href="mailto:reza.larimi@gmail.com">Email</a><a href="../card/">Save my contact</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Reza Larimi, writing</title>
+  <link>https://rezalarimi.com/blog/</link>
+  <atom:link href="https://rezalarimi.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Occasional pieces by Reza Larimi on intelligence, hardware, founders and what he is learning.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 12 Sep 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Nothing About This Is Artificial: A Perspective on AI as Nature's Next Move</title>
+    <link>https://rezalarimi.com/blog/advanced-intelligence/</link>
+    <guid isPermaLink="true">https://rezalarimi.com/blog/advanced-intelligence/</guid>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
+    <description>AI is not artificial. It is evolution finding a new substrate. One perspective on the superintelligence moment, without telling you how to feel about it.</description>
+  </item>
+</channel>
+</rss>
