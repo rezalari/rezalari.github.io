@@ -75,12 +75,15 @@
   .links{display:none;gap:30px;font-size:15px;color:var(--ink-2)}
   .links a:hover{color:var(--ink)}
   @media(min-width:900px){.links{display:flex}}
-  .nav .btn{display:none}
-  @media(min-width:600px){.nav .btn{display:inline-flex}}
+  .nav-actions{display:flex;gap:8px}
+  .nav .btn:not(.ghost){display:none}
+  @media(min-width:600px){.nav .btn:not(.ghost){display:inline-flex}}
   .nav.on-ink{background:var(--ink);color:var(--on);border-bottom-color:var(--line-on)}
   .nav.on-ink .links{color:var(--on-2)}
   .nav.on-ink .links a:hover{color:var(--on)}
   .nav.on-ink .btn{--bg:var(--on);--fg:var(--ink)}
+  .nav.on-ink .btn.ghost{background:transparent;color:var(--on)}
+  .nav.on-ink .btn.ghost:hover{background:var(--on);color:var(--ink)}
 
   /* hero: type block on paper, then one full-bleed halftone band that fills the rest of the viewport */
   .hero{min-height:calc(100dvh - var(--nav));display:flex;flex-direction:column}
@@ -271,8 +274,8 @@
 <nav class="nav" aria-label="Primary">
   <div class="wrap">
     <a class="brand" href="#top">Reza Larimi</a>
-    <div class="links"><a href="#about">About</a><a href="#help">How I help</a><a href="#thinking">Thinking</a><a href="blog/">Writing</a><a href="#record">Track record</a><a href="#faq">Questions</a></div>
-    <a class="btn btn-sm" href="#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a>
+    <div class="links"><a href="#about">About</a><a href="#help">How I help</a><a href="#record">Track record</a><a href="#faq">Questions</a></div>
+    <div class="nav-actions"><a class="btn btn-sm ghost" href="blog/">Writing</a><a class="btn btn-sm" href="#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a></div>
   </div>
 </nav>
 

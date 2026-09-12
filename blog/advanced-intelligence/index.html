@@ -65,8 +65,9 @@
   .links{display:none;gap:30px;font-size:15px;color:var(--ink-2)}
   .links a:hover,.links a[aria-current]{color:var(--ink)}
   @media(min-width:900px){.links{display:flex}}
-  .nav .btn{display:none}
-  @media(min-width:600px){.nav .btn{display:inline-flex}}
+  .nav-actions{display:flex;gap:8px}
+  .nav .btn:not(.ghost){display:none}
+  @media(min-width:600px){.nav .btn:not(.ghost){display:inline-flex}}
 
   /* head of the piece: kicker, display title, standfirst, one ruled meta row */
   .post-head{padding:56px 0 40px}
@@ -119,8 +120,8 @@
 <nav class="nav" aria-label="Primary">
   <div class="wrap">
     <a class="brand" href="../../">Reza Larimi</a>
-    <div class="links"><a href="../../#about">About</a><a href="../../#help">How I help</a><a href="../../#thinking">Thinking</a><a href="../" aria-current="page">Writing</a><a href="../../#faq">Questions</a></div>
-    <a class="btn btn-sm" href="../../#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a>
+    <div class="links"><a href="../../#about">About</a><a href="../../#help">How I help</a><a href="../../#record">Track record</a><a href="../../#faq">Questions</a></div>
+    <div class="nav-actions"><a class="btn btn-sm ghost" href="../" aria-current="page">Writing</a><a class="btn btn-sm" href="../../#book">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a></div>
   </div>
 </nav>
 
@@ -173,7 +174,7 @@
 
       <div class="byline">
         <img src="../../assets/reza-600.jpg" width="72" height="72" alt="Reza Larimi" loading="lazy">
-        <p><b>Reza Larimi</b>Engineering manager based in Vancouver, currently completing his MBA at SFU Beedie. Fractional CTO and founder coach for deep tech hardware. These are his personal views.</p>
+        <p><b>Reza Larimi</b>Fractional CTO and founder coach for deep tech hardware, based in Vancouver. These are his personal views.</p>
       </div>
 
       <div class="share">
