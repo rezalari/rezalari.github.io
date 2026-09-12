@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reza Larimi, contact card</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Save Reza Larimi to your contacts. Fractional CTO and founder coach, deep tech hardware.">
+<meta name="theme-color" content="#f3f2ee">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3f2ee; --ink:#141414; --ink-2:#4a4a4a; --ink-3:#6b6b6b; --line:rgba(20,20,20,.22);
+    --display:"Anton","Impact","Arial Narrow Bold","Arial Narrow",sans-serif;
+    --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--paper);-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+  img{display:block;max-width:100%}
+  h1,p,ul{margin:0}
+  ul{padding:0;list-style:none}
+  main{width:100%;max-width:440px;margin:0 auto;padding:0 20px 40px;flex:1}
+  .portrait{margin:0 -20px;aspect-ratio:4/3;overflow:hidden;background:#e9e8e3;border-bottom:1px solid var(--ink)}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;filter:grayscale(1) contrast(1.05)}
+  .display{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+  h1.display{font-size:clamp(48px,14vw,68px);margin:26px 0 10px}
+  .role{color:var(--ink-2);font-size:16px;max-width:30ch}
+  .place{color:var(--ink-3);font-size:14px;margin-top:6px}
+  .actions{margin-top:30px;border-top:1px solid var(--ink)}
+  .actions li{border-bottom:1px solid var(--line)}
+  .actions a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-weight:500;font-size:16px;transition:padding .25s var(--ease)}
+  .actions a:hover{padding-left:6px}
+  .actions .ar{color:var(--ink-3)}
+  .actions .primary a{background:var(--ink);color:var(--paper);padding:16px 18px;margin:0;border:1px solid var(--ink)}
+  .actions .primary a:hover{background:transparent;color:var(--ink);padding-left:18px}
+  .actions .primary{border-bottom:0;margin-bottom:10px}
+  .actions .pending a{color:var(--ink-3)}
+  .actions .pending small{font-size:13px;font-weight:400}
+  footer{max-width:440px;margin:0 auto;padding:18px 20px 30px;color:var(--ink-3);font-size:13px;width:100%;border-top:1px solid var(--line)}
+  footer a{border-bottom:1px solid var(--line)}
+  footer a:hover{border-color:var(--ink)}
+  @media(min-width:520px){
+    main{padding-top:40px}
+    .portrait{margin:0;border:1px solid var(--ink)}
+  }
+  @media(prefers-reduced-motion:reduce){.actions a{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <figure class="portrait"><img src="../assets/bw/listen-soft.jpg" alt="Reza Larimi" width="1600" height="900" fetchpriority="high"></figure>
+  <h1 class="display">Reza Larimi</h1>
+  <p class="role">Fractional CTO and founder coach, deep tech hardware.</p>
+  <p class="place">Vancouver, Canada</p>
+  <ul class="actions">
+    <li class="primary"><a href="reza-larimi.vcf" download="reza-larimi.vcf">Save contact <span class="ar" aria-hidden="true">&darr;</span></a></li>
+    <li><a href="https://cal.com/rezalarimi/intro">Book a call <span class="ar" aria-hidden="true">&rarr;</span></a></li>
+    <li><a href="https://www.linkedin.com/in/larimi/" target="_blank" rel="noopener">LinkedIn <span class="ar" aria-hidden="true">&rarr;</span></a></li>
+    <li class="pending"><a href="#whatsapp" aria-disabled="true">WhatsApp <small>coming soon</small></a></li>
+    <li><a href="https://www.youtube.com/@reza-larimi" target="_blank" rel="noopener">YouTube <span class="ar" aria-hidden="true">&rarr;</span></a></li>
+    <li><a href="https://github.com/rezalari" target="_blank" rel="noopener">GitHub <span class="ar" aria-hidden="true">&rarr;</span></a></li>
+    <li><a href="mailto:reza.larimi@gmail.com">Email <span class="ar" aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</main>
+<footer><a href="../">rezalarimi.com</a></footer>
+</body>
+</html>

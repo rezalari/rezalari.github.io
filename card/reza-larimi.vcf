@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Larimi;Reza;;;
+FN:Reza Larimi
+TITLE:Fractional CTO and Founder Coach
+ORG:WearTech Labs, Simon Fraser University
+EMAIL;TYPE=INTERNET:reza.larimi@gmail.com
+URL:https://rezalarimi.com
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/larimi/
+URL;TYPE=YouTube:https://www.youtube.com/@reza-larimi
+URL;TYPE=GitHub:https://github.com/rezalari
+URL;TYPE=Booking:https://cal.com/rezalarimi/intro
+ADR;TYPE=WORK:;;;Vancouver;BC;;Canada
+NOTE:Fractional CTO and founder coach for deep tech hardware.
+END:VCARD
