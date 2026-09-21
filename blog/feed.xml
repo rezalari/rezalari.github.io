@@ -6,7 +6,14 @@
   <atom:link href="https://rezalarimi.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Occasional pieces by Reza Larimi on intelligence, hardware, founders and what he is learning.</description>
   <language>en</language>
-  <lastBuildDate>Sat, 12 Sep 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 21 Sep 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>A Kind No: Four Questions Before the Next Yes</title>
+    <link>https://rezalarimi.com/blog/a-kind-no/</link>
+    <guid isPermaLink="true">https://rezalarimi.com/blog/a-kind-no/</guid>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+    <description>You can care about people and still hold a hard standard. A one-minute check before the next yes: purpose, capacity, ownership, trade-off. Prompted by an HBR piece on purpose-driven leadership.</description>
+  </item>
   <item>
     <title>Life Has No Stop Button: One Perspective on the AI Moment</title>
     <link>https://rezalarimi.com/blog/life-has-no-stop-button/</link>

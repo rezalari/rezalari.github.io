@@ -25,6 +25,7 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 
 ## Writing
 
+- A Kind No: Four Questions Before the Next Yes (2026-09-21): https://rezalarimi.com/blog/a-kind-no/ . Kindness can include a firm no. Four questions before the next yes: purpose (what outcome), capacity (what it takes), ownership (who decides), trade-off (what changes). The boundary sounds like "That could be valuable. Which existing priority should we replace?" A mission is not a substitute for resources. Prompted by McLeod and Lotardo in HBR.
 - Life Has No Stop Button: One Perspective on the AI Moment (2026-09-12): https://rezalarimi.com/blog/life-has-no-stop-button/ . Reza argues for the term "advanced intelligence" over "artificial intelligence": AI is silicon, lithium and energy arranged by creatures made of minerals and energy, evolution trying a new substrate. A more capable intelligence reshaping the world is the oldest story in biology, and life has no stop button. Neither a warning nor a reassurance, a lens.
 
 ## Roles
