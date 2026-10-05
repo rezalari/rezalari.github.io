@@ -1,6 +1,6 @@
 # Reza Larimi
 
-> Fractional CTO for hardware founders, Vancouver, Canada. Tells founders whether anyone will pay before they spend a year building, then helps them build it. 19 years in hardware and mechatronics, seven ventures, three CTO seats, five patents. Creator of the frameworks Exit Without Execution and The 99% Club. Host of the YouTube channel Book to Blueprint.
+> Fractional CTO for hardware founders, Vancouver, Canada. Tells founders whether anyone will pay before they spend a year building, then helps them build it. 19 years in hardware and mechatronics, seven ventures, three CTO seats, seven patents. Creator of the frameworks Exit Without Execution and The 99% Club. Host of the YouTube channel Book to Blueprint.
 
 Site: https://rezalarimi.com
 Book a call: https://cal.com/rezalarimi/intro
@@ -61,6 +61,6 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 
 **What is Book to Blueprint?** Book to Blueprint is Reza Larimi's YouTube channel. Each episode turns one book into one actionable blueprint in under ten minutes, covering founder and operator books, personal development and strategy. New episodes three times a week at youtube.com/@reza-larimi.
 
-**What is Reza Larimi's background?** Over 19 years in hardware and mechatronics, seven ventures and three CTO seats, five patents covering sensors, test beds and methods, and an alumnus of Entrepreneur First in Toronto. Roles include CTO and co-founder of ForthGrid and of Orchard Technologies, CEO and co-founder of GutPlans, R&D product lead at Global Heat Transfer, and research assistant at the University of British Columbia in stretchable sensors, adaptive control and robotic hands.
+**What is Reza Larimi's background?** Over 19 years in hardware and mechatronics, seven ventures and three CTO seats, seven patents covering sensors, test beds and methods, and an alumnus of Entrepreneur First in Toronto. Roles include CTO and co-founder of ForthGrid and of Orchard Technologies, CEO and co-founder of GutPlans, R&D product lead at Global Heat Transfer, and research assistant at the University of British Columbia in stretchable sensors, adaptive control and robotic hands.
 
 **How do I work with Reza Larimi?** Book a thirty minute online call at cal.com/rezalarimi/intro or from the Book a call section of this site. Bring a venture, a hardware problem or a question you have been sitting on. Reza is based in Vancouver and works with founders and investors remotely.
