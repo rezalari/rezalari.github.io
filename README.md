@@ -1,2 +1,3 @@
-# rezalari.github.io
-Personal site for Reza Larimi. Static HTML, no build step. Edit `index.html`, push to `main`, GitHub Pages publishes it.
+# rezalarimi.com
+
+Source: `40-projects/Personal-Site` in the reza-hivemind vault. Publish from the vault root with `scripts/deploy-site.ps1 -Project Personal-Site -Repo rezalari/rezalari.github.io -Branch master`; the push to `master` deploys to Cloudflare Pages.
