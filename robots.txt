@@ -1,5 +1,69 @@
+# rezalarimi.com
+# Search engines and AI assistants are welcome to read every public page.
+# /card/ is a personal contact card, kept out of every crawler.
+# A crawler follows only its most specific group, so each named group repeats Disallow: /card/.
+
 User-agent: *
-Allow: /
 Disallow: /card/
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Disallow: /card/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /card/
+Allow: /
+
+# Google Gemini (separate from Google Search, which follows Googlebot)
+User-agent: Google-Extended
+Disallow: /card/
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Disallow: /card/
+Allow: /
+
+User-agent: OAI-SearchBot
+Disallow: /card/
+Allow: /
+
+User-agent: ChatGPT-User
+Disallow: /card/
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Disallow: /card/
+Allow: /
+
+User-agent: Claude-SearchBot
+Disallow: /card/
+Allow: /
+
+User-agent: Claude-User
+Disallow: /card/
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Disallow: /card/
+Allow: /
+
+User-agent: Perplexity-User
+Disallow: /card/
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Disallow: /card/
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Disallow: /card/
+Allow: /
 
 Sitemap: https://rezalarimi.com/sitemap.xml
