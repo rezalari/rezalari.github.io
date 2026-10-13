@@ -116,6 +116,11 @@
   .share{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
   .share-label{font-size:14px;color:var(--ink-3);margin-right:8px}
   .share .btn{min-height:44px}
+  .byline{max-width:var(--measure);margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:grid;grid-template-columns:72px 1fr;gap:20px;align-items:start}
+  .byline img{width:72px;height:72px;object-fit:cover}
+  .byline p{font-size:15px;color:var(--ink-2);max-width:56ch}
+  .byline b{display:block;font-weight:600;color:var(--ink);font-size:16px;margin-bottom:4px}
+  .byline + .post-end{margin-top:36px;padding-top:0;border-top:0}
   .dark{background:var(--ink);color:var(--on);color-scheme:dark}
   footer{color:var(--on-3);font-size:14px;padding:28px 0;border-top:1px solid var(--line-on)}
   footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
@@ -208,14 +213,18 @@
             <p class="closing-question">Which talent will you make time to develop this week?</p>
           </div>
         </div>
+        <div class="byline">
+          <img src="../../assets/reza-byline.jpg" width="72" height="72" alt="Reza Larimi" loading="lazy" decoding="async">
+          <p><b>Reza Larimi</b>Fractional CTO, founder and coach for deep tech hardware. First principles, no distractions. These are his personal views.</p>
+        </div>
         <div class="post-end">
-          <a class="back" href="../">All writing <span aria-hidden="true">→</span></a>
           <div class="share" aria-label="Share this article">
             <span class="share-label">Share</span>
             <a class="btn ghost btn-sm" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frezalarimi.com%2Fblog%2Fhow-talent-becomes-a-strength%2F" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn ghost btn-sm" href="https://x.com/intent/post?text=How%20Talent%20Becomes%20a%20Strength&amp;url=https%3A%2F%2Frezalarimi.com%2Fblog%2Fhow-talent-becomes-a-strength%2F&amp;via=reza_larimi" target="_blank" rel="noopener">X</a>
             <a class="btn ghost btn-sm" href="mailto:?subject=How%20Talent%20Becomes%20a%20Strength&amp;body=https%3A%2F%2Frezalarimi.com%2Fblog%2Fhow-talent-becomes-a-strength%2F">Email</a>
           </div>
+          <a class="back" href="../">All writing <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
