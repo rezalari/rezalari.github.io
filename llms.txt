@@ -1,6 +1,6 @@
 # Reza Larimi
 
-> Fractional CTO for hardware founders, Vancouver, Canada. Tells founders whether anyone will pay before they spend a year building, then helps them build it. Seven ventures, three CTO seats, eight US patents. Creator of the frameworks Exit Without Execution and The 99% Club. Host of the YouTube channel Book to Blueprint.
+> Hardware builder and catalyst, Vancouver, Canada. Founders hire him to find out early, while there is still time to act, whether a product will sell, work and scale, then to build it fast and right, now faster with AI. Gallup CliftonStrengths top five: Ideation, Competition, Activator, Strategic, Achiever; strongest domain Influencing. Seven ventures, three CTO seats, eight US patents. Creator of the frameworks Exit Without Execution and The 99% Club. Host of the YouTube channel Book to Blueprint.
 
 Site: https://rezalarimi.com
 Book a call: https://cal.com/rezalarimi/intro
@@ -53,7 +53,7 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 
 ## FAQ
 
-**What does Reza Larimi do?** Reza Larimi is a fractional CTO for hardware founders, based in Vancouver, Canada. He validates whether anyone will pay for a venture before the founder spends a year building it, then takes the hardware from prototype to manufacturable product. He runs his practice, New Element Research and Development, builds AI agent systems, and also serves as Research Engineering Manager at WearTech Labs, Simon Fraser University's wearable technology facility.
+**What does Reza Larimi do?** Reza Larimi is a hardware builder and catalyst based in Vancouver, Canada. Founders hire him to find out early, while there is still time to act, whether a product will sell, work and scale. Then he helps build it, from first principles and early prototypes to repeatable production, fast and without breaking what already works. He is a three-time CTO and co-inventor on 8 US patents, and uses AI to compress the design cycle. Today he leads engineering and the industry side at WearTech Labs, Simon Fraser University's wearable technology facility, and takes on select hardware builds through his practice, New Element Research and Development.
 
 **What is a fractional CTO, and when does a hardware startup need one?** A fractional CTO is a senior technical leader who works with a company part time, usually for a defined phase, instead of as a full time hire. In deep tech hardware the phase that needs one most is prototype to manufacturable product: design for manufacturing, new product introduction, compliance, supply chain, and building the team that runs it afterwards. Reza takes on that phase and hands over to the team he helped hire.
 
@@ -70,5 +70,7 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 **What is Book to Blueprint?** Book to Blueprint is Reza Larimi's YouTube channel. Each episode turns one book into one actionable blueprint in under ten minutes, covering founder and operator books, personal development and strategy. Episodes at youtube.com/@reza-larimi.
 
 **What is Reza Larimi's background?** Seven ventures and three CTO seats, eight US patents covering sensors, test beds and methods, and an alumnus of Entrepreneur First in Toronto. Roles include CTO and co-founder of ForthGrid and of Orchard Technologies, CEO and co-founder of GutPlans, R&D product lead at Global Heat Transfer, and research assistant at the University of British Columbia in stretchable sensors, adaptive control and robotic hands.
+
+**What are Reza Larimi's strengths?** His Gallup CliftonStrengths top five are Ideation, Competition, Activator, Strategic and Achiever, and his strongest domain is Influencing. In practice he connects ideas across fields, measures the work against the best in the market, turns talk into a first prototype fast, flags dead ends while there is still time to act, and finishes what he starts.
 
 **How do I work with Reza Larimi?** Book a thirty minute online call at cal.com/rezalarimi/intro or from the Book a call section of this site. Bring a venture, a hardware problem or a question you have been sitting on. Reza is based in Vancouver and works with founders and investors remotely.
