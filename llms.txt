@@ -1,6 +1,6 @@
 # Reza Larimi
 
-> Fractional CTO for hardware founders, Vancouver, Canada. Tells founders whether anyone will pay before they spend a year building, then helps them build it. 19 years in hardware and mechatronics, seven ventures, three CTO seats, eight US patents. Creator of the frameworks Exit Without Execution and The 99% Club. Host of the YouTube channel Book to Blueprint.
+> Fractional CTO for hardware founders, Vancouver, Canada. Tells founders whether anyone will pay before they spend a year building, then helps them build it. Seven ventures, three CTO seats, eight US patents. Creator of the frameworks Exit Without Execution and The 99% Club. Host of the YouTube channel Book to Blueprint.
 
 Site: https://rezalarimi.com
 Book a call: https://cal.com/rezalarimi/intro
@@ -14,7 +14,7 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 - Reza Larimi is a fractional CTO for hardware founders, based in Vancouver, Canada, working with founders and investors remotely.
 - He runs New Element Research and Development, his fractional CTO practice for hardware companies (2019 to now).
 - He is Research Engineering Manager at WearTech Labs, Simon Fraser University's wearable technology facility (2025 to now).
-- Track record: 19+ years in hardware and mechatronics, seven ventures, three CTO seats, eight US patents covering sensors, test beds and methods.
+- Track record: seven ventures, three CTO seats, eight US patents covering sensors, test beds and methods.
 - Alumnus of Entrepreneur First, Toronto. MBA in Innovation and Value Creation in progress at SFU (Beedie School of Business).
 - Frameworks: Exit Without Execution, The 99% Club, Stack and ship. YouTube channel: Book to Blueprint.
 
@@ -23,13 +23,13 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 - Venture Validation Sprint: Thirty to forty-five days to prove or kill a venture thesis on paper: customer, funnel, pricing, revenue model and IP position.
 - Fractional CTO: Hardware from prototype to manufacturable product: design for manufacturing, new product introduction, compliance, supply chain and team.
 - Technical Due Diligence: An operator's read on a hardware company for investors and boards.
-- Founder Coaching: Positioning, validation, priorities and the patterns that put startups in the 99% Club.
+- Founder Coaching: Positioning, validation, priorities and the habits that keep founders out of the 99% Club.
 - AI Systems: Multi-agent pipelines, digital twins and automations built to run in production. Often the fastest way to prove a thesis is to ship the thing.
 
 ## Frameworks
 
 - Exit Without Execution: validate the commercial thesis on paper before building. Book in development.
-- The 99% Club: the predictable ways founders disqualify themselves from the one percent. Book planned.
+- The 99% Club: a sarcastic name for the founders who follow the popular startup playbook without checking the odds; almost none reach the destination it promises. Book planned.
 - Stack and ship: stacked strategies and tools turn an idea into a working thing in hours.
 
 ## Writing
@@ -59,7 +59,7 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 
 **What is Exit Without Execution?** Exit Without Execution is Reza Larimi's framework for validating the commercial thesis of a venture on paper before building it. It tests the customer, the funnel, conversion, pricing, the revenue model and the IP position first. It matters most in hardware, where execution costs the most and a wrong thesis costs everything. The framework is in use with clients and a book is in development.
 
-**What is The 99% Club?** The 99% Club is Reza Larimi's name for the predictable ways founders disqualify themselves from the one percent of startups that succeed: loving the solution before the problem, building a product when the customer wanted a service, and skipping the pricing test. It is drawn from his seven ventures and is the subject of a planned book.
+**What is The 99% Club?** The 99% Club is Reza Larimi's sarcastic name for the founders who follow the popular startup playbook without checking the odds: incubator and investor advice, build big or go home, raise and burn. Almost none of them reach the destination that route promises, so it is not a club you want to join. The point is to choose your route on purpose and read the early signals, real customers and real cash. A book is planned.
 
 **What is a Venture Validation Sprint?** A Venture Validation Sprint is a thirty to forty-five day engagement that proves or kills a venture thesis on paper, before the founder commits years and capital to building it. It applies Exit Without Execution to one venture: customer, funnel, pricing, revenue model and IP position, with a clear go or no-go at the end.
 
@@ -67,8 +67,8 @@ Writing: https://rezalarimi.com/blog/ (RSS: https://rezalarimi.com/blog/feed.xml
 
 **What is Stack and ship?** Stack and ship is how Reza works every day. Stacked strategies and stacked AI tools mean an idea can become a working thing to look at in hours rather than quarters. The rule behind it is to start small and focused, do one thing brilliantly, then compound.
 
-**What is Book to Blueprint?** Book to Blueprint is Reza Larimi's YouTube channel. Each episode turns one book into one actionable blueprint in under ten minutes, covering founder and operator books, personal development and strategy. New episodes three times a week at youtube.com/@reza-larimi.
+**What is Book to Blueprint?** Book to Blueprint is Reza Larimi's YouTube channel. Each episode turns one book into one actionable blueprint in under ten minutes, covering founder and operator books, personal development and strategy. Episodes at youtube.com/@reza-larimi.
 
-**What is Reza Larimi's background?** Over 19 years in hardware and mechatronics, seven ventures and three CTO seats, eight US patents covering sensors, test beds and methods, and an alumnus of Entrepreneur First in Toronto. Roles include CTO and co-founder of ForthGrid and of Orchard Technologies, CEO and co-founder of GutPlans, R&D product lead at Global Heat Transfer, and research assistant at the University of British Columbia in stretchable sensors, adaptive control and robotic hands.
+**What is Reza Larimi's background?** Seven ventures and three CTO seats, eight US patents covering sensors, test beds and methods, and an alumnus of Entrepreneur First in Toronto. Roles include CTO and co-founder of ForthGrid and of Orchard Technologies, CEO and co-founder of GutPlans, R&D product lead at Global Heat Transfer, and research assistant at the University of British Columbia in stretchable sensors, adaptive control and robotic hands.
 
 **How do I work with Reza Larimi?** Book a thirty minute online call at cal.com/rezalarimi/intro or from the Book a call section of this site. Bring a venture, a hardware problem or a question you have been sitting on. Reza is based in Vancouver and works with founders and investors remotely.
