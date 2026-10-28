@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://rezalarimi.com/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image><image:loc>https://rezalarimi.com/assets/bw/listen-soft.jpg</image:loc></image:image>
@@ -11,9 +11,16 @@
   </url>
   <url>
     <loc>https://rezalarimi.com/blog/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rezalarimi.com/blog/red-ocean-or-bs-idea/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://rezalarimi.com/assets/red-ocean-or-bs-idea-share.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://rezalarimi.com/blog/four-questions-to-find-your-strengths/</loc>
